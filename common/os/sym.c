@@ -990,7 +990,7 @@ chainlist_detach(sym_chainlist_t *list, sym_callchain_t *chain)
 int
 sym_callchain_add(sym_t *sym, uint64_t *ips, int ips_num,
 	sym_chainlist_t *list)
-{
+{debug_print(NULL, 2, "Reaching in sym_callchain \n");
 	sym_callchain_t *chain;
 
 	if ((chain = chain_find(list, ips, ips_num)) != NULL) {

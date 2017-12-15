@@ -124,6 +124,7 @@ debug_print(FILE *out, int level, const char *fmt, ...)
 
 	if (level <= s_debuglevel) {
 		if (out == NULL) {
+
 			if (s_logfile != NULL) {
 				(void) pthread_mutex_lock(&s_debug_ctl.mutex);
 				(void) fprintf(s_logfile,
@@ -136,6 +137,7 @@ debug_print(FILE *out, int level, const char *fmt, ...)
 				    &s_debug_ctl.mutex);
 			}
 		} else {
+
 			(void) pthread_mutex_lock(&s_debug_ctl.mutex);
 			(void) fprintf(out,
 			    "%"PRIu64": ", current_ms(&g_tvbase) / 1000);

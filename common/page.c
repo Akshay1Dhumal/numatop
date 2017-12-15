@@ -145,9 +145,10 @@ page_create(cmd_t *cmd)
 /*
  * Show the page on the screen.
  */
-static boolean_t
-page_show(page_t *page, boolean_t smpl)
+static boolean_t page_show(page_t *page, boolean_t smpl)
 {
+
+	//printf(" page show \n");
 	if (g_scr_height < 24 || g_scr_width < 80) {
 		dump_write("\n%s\n", "Terminal size is too small.");
 		dump_write("%s\n", "Please resize it to 80x24 or larger.");
@@ -159,7 +160,7 @@ page_show(page_t *page, boolean_t smpl)
 	}
 
 	if ((!page->dyn_win.inited) &&
-	    (win_dyn_init(page) != 0)) {
+	    (win_dyn_init(page) != 0)) { //call win_dyn which calls as per the window required.
 		return (B_FALSE);
 	}
 
@@ -175,9 +176,9 @@ page_show(page_t *page, boolean_t smpl)
 /*
  * Show the next page in list.
  */
-boolean_t
-page_next_execute(boolean_t smpl)
+boolean_t page_next_execute(boolean_t smpl)
 {
+	//printf("page next execute \n");
 	page_t *next_run;
 	boolean_t ret;
 
@@ -185,7 +186,7 @@ page_next_execute(boolean_t smpl)
 		return (B_FALSE);
 	}
 
-	ret = page_show(next_run, smpl);
+	ret = page_show(next_run, smpl); //page_t
 	s_page_list.cur = next_run;
 
 	if (smpl) {

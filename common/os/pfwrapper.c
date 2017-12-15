@@ -53,8 +53,7 @@ pf_event_open(struct perf_event_attr *attr, pid_t pid, int cpu, int group_fd,
 	return (syscall(__NR_perf_event_open, attr, pid, cpu, group_fd, flags));
 }
 
-static int
-mmap_buffer_read(struct perf_event_mmap_page *header, void *buf, size_t size)
+static int mmap_buffer_read(struct perf_event_mmap_page *header, void *buf, size_t size)
 {
 	void *data;
 	uint64_t data_head, data_tail;
@@ -99,8 +98,7 @@ mmap_buffer_read(struct perf_event_mmap_page *header, void *buf, size_t size)
 	return (0);
 }
 
-static void
-mmap_buffer_skip(struct perf_event_mmap_page *header, int size)
+static void mmap_buffer_skip(struct perf_event_mmap_page *header, int size)
 {
 	int data_head;
 
@@ -114,8 +112,7 @@ mmap_buffer_skip(struct perf_event_mmap_page *header, int size)
 	header->data_tail += size;
 }
 
-static void
-mmap_buffer_reset(struct perf_event_mmap_page *header)
+static void mmap_buffer_reset(struct perf_event_mmap_page *header)
 {
 	int data_head;
 
@@ -125,8 +122,7 @@ mmap_buffer_reset(struct perf_event_mmap_page *header)
 	header->data_tail = data_head;
 }
 
-int
-pf_ringsize_init(void)
+int pf_ringsize_init(void)
 {
 	switch (g_precise) {
 	case PRECISE_HIGH:
@@ -148,8 +144,7 @@ pf_ringsize_init(void)
 	return (s_mapsize - g_pagesize);
 }
 
-int
-pf_profiling_setup(struct _perf_cpu *cpu, int idx, pf_conf_t *conf)
+int pf_profiling_setup(struct _perf_cpu *cpu, int idx, pf_conf_t *conf)
 {
 	struct perf_event_attr attr;
 	int *fds = cpu->fds;
@@ -240,8 +235,7 @@ pf_profiling_allstop(struct _perf_cpu *cpu)
 	return (pf_profiling_stop(cpu, 0));
 }
 
-static uint64_t
-scale(uint64_t value, uint64_t time_enabled, uint64_t time_running)
+static uint64_t scale(uint64_t value, uint64_t time_enabled, uint64_t time_running)
 {
 	uint64_t res = 0;
 
@@ -256,8 +250,7 @@ scale(uint64_t value, uint64_t time_enabled, uint64_t time_running)
 	return (res);
 }
 
-static int
-profiling_sample_read(struct perf_event_mmap_page *mhdr, int size,
+static int profiling_sample_read(struct perf_event_mmap_page *mhdr, int size,
 	pf_profiling_rec_t *rec)
 {
 	struct { uint32_t pid, tid; } id;
@@ -365,8 +358,7 @@ L_EXIT:
 	return (ret);
 }
 
-static void
-profiling_recbuf_update(pf_profiling_rec_t *rec_arr, int *nrec,
+static void profiling_recbuf_update(pf_profiling_rec_t *rec_arr, int *nrec,
 	pf_profiling_rec_t *rec)
 {
 	int i;
@@ -384,8 +376,7 @@ profiling_recbuf_update(pf_profiling_rec_t *rec_arr, int *nrec,
 	*nrec += 1;
 }
 
-void
-pf_profiling_record(struct _perf_cpu *cpu, pf_profiling_rec_t *rec_arr,
+void pf_profiling_record(struct _perf_cpu *cpu, pf_profiling_rec_t *rec_arr,
 	int *nrec)
 {
 	struct perf_event_mmap_page *mhdr = cpu->map_base;
@@ -420,8 +411,7 @@ pf_profiling_record(struct _perf_cpu *cpu, pf_profiling_rec_t *rec_arr,
 	}
 }
 
-int
-pf_ll_setup(struct _perf_cpu *cpu, pf_conf_t *conf)
+int pf_ll_setup(struct _perf_cpu *cpu, pf_conf_t *conf)
 {
 	struct perf_event_attr attr;
 	int *fds = cpu->fds;
@@ -450,7 +440,8 @@ pf_ll_setup(struct _perf_cpu *cpu, pf_conf_t *conf)
 		fds[0] = INVALID_FD;
 		return (-1);
 	}
-
+	debug_print(NULL, 2, "pf_ll_setup \n"
+					"for CPU%d\n", cpu->cpuid);
 	cpu->map_len = s_mapsize;
 	cpu->map_mask = s_mapmask;
 	return (0);
@@ -462,7 +453,7 @@ pf_ll_start(struct _perf_cpu *cpu)
 	if (cpu->fds[0] != INVALID_FD) {
 		return (ioctl(cpu->fds[0], PERF_EVENT_IOC_ENABLE, 0));
 	}
-	
+	debug_print(NULL, 2, "pf_ll_start: pf_event_open is success %d \n ",cpu->fds[0]);
 	return (0);
 }
 
@@ -476,14 +467,14 @@ pf_ll_stop(struct _perf_cpu *cpu)
 	return (0);
 }
 
-static int
-ll_sample_read(struct perf_event_mmap_page *mhdr, int size,
-	pf_ll_rec_t *rec)
+static int ll_sample_read(struct perf_event_mmap_page *mhdr, int size,pf_ll_rec_t *rec)
 {
-	struct { uint32_t pid, tid; } id;
+	struct
+	{ uint32_t pid, tid;
+	} id;
 	uint64_t i, addr, cpu, weight, nr, value, *ips;
 	int j, ret = -1;
-
+	debug_print(NULL, 2, "ll_sample_read: Inside \n");
 	/*
 	 * struct read_format {
 	 *	{ u32	pid, tid; }
@@ -521,9 +512,10 @@ ll_sample_read(struct perf_event_mmap_page *mhdr, int size,
 	}
 
 	size -= sizeof (nr);
-
+	debug_print(NULL, 2, "pf_ll_SAMPLE READ. SIZE : %d \n  ",size);
 	j = 0;
 	ips = rec->ips;
+	debug_print(NULL, 2, "pf_ll_start: pf_event_open is success. SIZE(NR) : %d IP_NJUM %d \n",size,IP_NUM);
 	for (i = 0; i < nr; i++) {
 		if (j >= IP_NUM) {
 			break;
@@ -559,6 +551,7 @@ ll_sample_read(struct perf_event_mmap_page *mhdr, int size,
 	rec->cpu = cpu;
 	rec->latency = weight;	
 	ret = 0;
+	debug_print(NULL, 2, "sample read  pid %d, tid %d,CPU %"PRIu64" ,latency %"PRIu64" , addr %"PRIu64" \n",rec->pid,rec->tid,rec->cpu,rec->latency,rec->addr);
 
 L_EXIT:
 	if (size > 0) {
@@ -570,11 +563,10 @@ L_EXIT:
 	return (ret);
 }
 
-static void
-ll_recbuf_update(pf_ll_rec_t *rec_arr, int *nrec, pf_ll_rec_t *rec)
+static void ll_recbuf_update(pf_ll_rec_t *rec_arr, int *nrec, pf_ll_rec_t *rec)
 {
 	int i;
-
+	debug_print(NULL, 2, "ll recbuf update \n");
 	if ((rec->pid == 0) || (rec->tid == 0)) {
 		/* Just consider the user-land process/thread. */
 		return;	
@@ -588,41 +580,44 @@ ll_recbuf_update(pf_ll_rec_t *rec_arr, int *nrec, pf_ll_rec_t *rec)
 	*nrec += 1;
 }
 
-void
-pf_ll_record(struct _perf_cpu *cpu, pf_ll_rec_t *rec_arr, int *nrec)
+void pf_ll_record(struct _perf_cpu *cpu, pf_ll_rec_t *rec_arr, int *nrec) //rec_arra contains for each pid of that cpu the address and latency
 {
 	struct perf_event_mmap_page *mhdr = cpu->map_base;
 	struct perf_event_header ehdr;
 	pf_ll_rec_t rec;
 	int size;
-
+	if(rec_arr==NULL)
+	    {
+		debug_print(NULL, 2, "Record array is NULL  \n");
+	    }
 	*nrec = 0;
-
-	for (;;) {
+	debug_print(NULL, 2, "pf_ll_RECORD \n");
+	for (;;) { //infinite loop
+		debug_print(NULL, 2, "Inside infinite for loop \n");
 		if (mmap_buffer_read(mhdr, &ehdr, sizeof(ehdr)) == -1) {
 			/* No valid record in ring buffer. */
 			return;
  		}
-
 		if ((size = ehdr.size - sizeof (ehdr)) <= 0) {
 			return;
 		}
 
 		if ((ehdr.type == PERF_RECORD_SAMPLE) && (rec_arr != NULL)) {
-			if (ll_sample_read(mhdr, size, &rec) == 0) {
+			if (ll_sample_read(mhdr, size, &rec) == 0)
+			{
 				ll_recbuf_update(rec_arr, nrec, &rec);
 			} else {
 				/* No valid record in ring buffer. */
 				return;	
 			}
 		} else {
+			debug_print(NULL, 2, "pf_ll_RECORD : skiping buffer read \n");
 			mmap_buffer_skip(mhdr, size);
 		}
 	}
 }
 
-void
-pf_resource_free(struct _perf_cpu *cpu)
+void pf_resource_free(struct _perf_cpu *cpu)
 {
 	int i;
 
@@ -674,12 +669,12 @@ static int
 read_fd(int fd, void *buf, int bytes)
 {
 	int left = bytes, ret;
-
+	debug_print(NULL,2,"Left is %d \n",left);
 	while (left > 0) {
 		if (((ret = read(fd, buf, left)) < 0) &&
 			(errno == EINTR)) {
-			debug_print(NULL, 2, "read_fd: read fd %d failed (ret = %d, errno = %d)\n",
-				fd, ret, errno);
+			debug_print(NULL, 2, "read_fd: read fd %d failed (ret = %d, errno = %d) left %d \n",
+				fd, ret, errno,left);
 			continue;
 		}
 
@@ -730,10 +725,11 @@ pf_uncoreqpi_free(struct _node *node)
 int
 pf_uncoreqpi_setup(struct _node *node)
 {
+
 	struct perf_event_attr attr;
 	node_qpi_t *qpi = &node->qpi;
 	int i;
-
+    printf("QPI number %d  ",qpi->qpi_num);
 	for (i = 0; i < qpi->qpi_num; i++) {
 		if (qpi->qpi_info[i].type == 0)
 			continue;
@@ -743,8 +739,10 @@ pf_uncoreqpi_setup(struct _node *node)
 
 		memset(&attr, 0, sizeof (attr));
 		attr.type = qpi->qpi_info[i].type;
+		printf("Attribute type qpi : %d ",qpi->qpi_info[i].type);
 		attr.size = sizeof(attr);
 		attr.config = qpi->qpi_info[i].config;
+		//printf("QPI config : %d ",qpi->qpi_info[i].config);
 		attr.disabled = 1;
 		attr.inherit = 1;
 		attr.read_format =
@@ -819,11 +817,11 @@ int pf_uncoreqpi_smpl(struct _node *node)
 
 			debug_print(NULL, 2, "pf_uncoreqpi_smpl: "
 				"node %d, qpi %d, fd %d: "
-				"%" PRIu64 ", %" PRIu64 ", %" PRIu64 "\n",
+				"%" PRIu64 ", %" PRIu64 ", %" PRIu64 ",Value scaled %" PRIu64 "\n",
 				node->nid, i, qpi->qpi_info[i].fd,
 				values[0] - qpi->qpi_info[i].values[0],
 				values[1] - qpi->qpi_info[i].values[1],
-				values[2] - qpi->qpi_info[i].values[2]);
+				values[2] - qpi->qpi_info[i].values[2],qpi->qpi_info[i].value_scaled);
 
 			memcpy(qpi->qpi_info[i].values, values, sizeof(values));
 		}
@@ -857,7 +855,7 @@ pf_uncoreimc_setup(struct _node *node)
 	struct perf_event_attr attr;
 	node_imc_t *imc = &node->imc;
 	int i;
-
+  printf("imc number %d\n ",imc->imc_num);
 	for (i = 0; i < imc->imc_num; i++) {
 		if (imc->imc_info[i].type == 0)
 			continue;
@@ -867,8 +865,10 @@ pf_uncoreimc_setup(struct _node *node)
 		
 		memset(&attr, 0, sizeof (attr));
 		attr.type = imc->imc_info[i].type;
+		//printf("Attribute type IMC : %d ",imc->imc_info[i].type);
 		attr.size = sizeof(attr);
 		attr.config = 0xff04;
+
 		attr.disabled = 1;
 		attr.inherit = 1;
 		attr.read_format =
@@ -943,7 +943,7 @@ int pf_uncoreimc_smpl(struct _node *node)
 
 			debug_print(NULL, 2, "pf_uncoreimc_smpl: "
 				"node %d, imc %d, fd %d: "
-				"%" PRIu64 ", %" PRIu64 ", %" PRIu64 "\n",
+				"%" PRIu64 ", %" PRIu64 ", %" PRIu64 "Value scaled %" PRIu64 "\n",
 				node->nid, i, imc->imc_info[i].fd,
 				values[0] - imc->imc_info[i].values[0],
 				values[1] - imc->imc_info[i].values[1],

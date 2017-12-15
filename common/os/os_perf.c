@@ -379,11 +379,10 @@ cpu_profiling_multi_restore(perf_cpu_t *cpu, void *arg)
 	return (0);
 }
 
-static int
-cpu_ll_setup(perf_cpu_t *cpu, void *arg)
+static int cpu_ll_setup(perf_cpu_t *cpu, void *arg)
 {
 	cpu_init(cpu);
-	if (pf_ll_setup(cpu, &s_ll_conf) != 0) {
+	if (pf_ll_setup(cpu, &s_ll_conf) != 0) { //pf_ll_setup sets up the perf for all cpu and gives them perf attributes using s_ll_config
 		pf_resource_free(cpu);
 		return (-1);
 	}
@@ -405,8 +404,7 @@ cpu_ll_stop(perf_cpu_t *cpu, void *arg)
 	return (0);
 }
 
-static int
-llrec_add(perf_llrecgrp_t *grp, pf_ll_rec_t *record)
+static int llrec_add(perf_llrecgrp_t *grp, pf_ll_rec_t *record) //here it goes ....getting the ll data
 {
 	os_perf_llrec_t *llrec;
 
@@ -419,38 +417,51 @@ llrec_add(perf_llrecgrp_t *grp, pf_ll_rec_t *record)
 	llrec->addr = record->addr;
 	llrec->cpu = record->cpu;
 	llrec->latency = record->latency;
+	debug_print(NULL, 2, "LATENCY FROM LLREC_ADD %d \n",llrec->latency );
 	llrec->callchain.ip_num = record->ip_num;
 	memcpy(llrec->callchain.ips, record->ips, IP_NUM * sizeof (uint64_t));
 	grp->nrec_cur++;
 	return (0);
 }
 
-static int
-cpu_ll_smpl(perf_cpu_t *cpu, void *arg)
+static int cpu_ll_smpl(perf_cpu_t *cpu, void *arg) //it goes from here : arg is task : which goes in :  This is done for each cpu
 {
 	task_ll_t *task = (task_ll_t *)arg;
+
+	/*task_ll_t structure{
+	 * perf_taskid_t task_id;
+	pid_t pid;
+	int lwpid;}
+	 */
 	pf_ll_rec_t *record;
 	track_proc_t *proc;
 	track_lwp_t *lwp;
 	int record_num, i;
+	pf_ll_record(cpu, s_ll_recbuf, &record_num); //record number points to number of records ,s_ll_recbuff is a pointer to all array elements of <pid,address,latency> and their accesss
 
-	pf_ll_record(cpu, s_ll_recbuf, &record_num);
-	if (record_num == 0) {
+	if (record_num == 0) { //check the record number for each cpu . If its zero , discard that
 		return (0);
 	}
 
-	for (i = 0; i < record_num; i++) {
+
+	for (i = 0; i < record_num; i++) { //for each <address,cpu,latency,pid>
 		record = &s_ll_recbuf[i];
-		if ((task->pid != 0) && (task->pid != record->pid)) {
+
+		debug_print(NULL, 2, "Received task  PID %d TID:  %d CPU  %"PRIu64" cpu2 %d \n",record->pid,record->tid,record->cpu,cpu->cpuid);
+		if ((task->pid == record->pid))
+				{
+
+				}
+		if ((task->pid != 0) && (task->pid != record->pid)) {//it checks here if the task it has to show up, matches with the pid of that record element, else it skips
+
 			continue;
 		}
 		
-		if ((task->pid != 0) && (task->lwpid != 0) &&
-			(task->lwpid != record->tid)) {
+		if ((task->pid != 0) && (task->lwpid != 0) &&(task->lwpid != record->tid)) {
 			continue;
 		}
 
-		if ((proc = proc_find(record->pid)) == NULL) {
+		if ((proc = proc_find(record->pid)) == NULL) { //finds in the proc for each process and updates accordingly
 			return (0);
 		}
 
@@ -461,7 +472,7 @@ cpu_ll_smpl(perf_cpu_t *cpu, void *arg)
 
 		pthread_mutex_lock(&proc->mutex);
 
-		llrec_add(&proc->llrec_grp, record);
+		llrec_add(&proc->llrec_grp, record); //proc->llrec_grp is now set with record.
 		llrec_add(&lwp->llrec_grp, record);
 
  		pthread_mutex_unlock(&proc->mutex);
@@ -472,8 +483,7 @@ cpu_ll_smpl(perf_cpu_t *cpu, void *arg)
 	return (0);
 }
 
-static int
-cpu_ll_setupstart(perf_cpu_t *cpu, void *arg)
+static int cpu_ll_setupstart(perf_cpu_t *cpu, void *arg)
 {
 	if (cpu_ll_setup(cpu, NULL) != 0) {
 		return (-1);
@@ -592,12 +602,11 @@ ll_stop(void)
 	return (0);	
 }
 
-static int
-ll_smpl(perf_ctl_t *ctl, task_ll_t *task, int *intval_ms)
+static int ll_smpl(perf_ctl_t *ctl, task_ll_t *task, int *intval_ms)
 {
 	*intval_ms = current_ms(&g_tvbase) - ctl->last_ms;
 	proc_intval_update(*intval_ms);
-	node_cpu_traverse(cpu_ll_smpl, (void *)task, B_FALSE, cpu_ll_setupstart);
+	node_cpu_traverse(cpu_ll_smpl, (void *)task, B_FALSE, cpu_ll_setupstart); //cpu_ll_smpl takes 2 args (cpu_i,task)
 	ctl->last_ms = current_ms(&g_tvbase);
 	return (0);	
 }
@@ -727,8 +736,7 @@ os_callchain_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms)
 	return (0);	
 }
 
-int
-os_ll_start(perf_ctl_t *ctl, perf_task_t *task)
+int os_ll_start(perf_ctl_t *ctl, perf_task_t *task)
 {
 	os_allstop();
 	proc_callchain_clear();
@@ -749,8 +757,7 @@ os_ll_start(perf_ctl_t *ctl, perf_task_t *task)
 	return (0);
 }
 
-int
-os_ll_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms)
+int os_ll_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms) //smaples the ll data
 {
 	if (!perf_ll_started()) {
 		return (-1);
@@ -816,8 +823,7 @@ ll_init(pf_conf_t *conf)
 	conf->sample_period = LL_PERIOD;
 }
 
-int
-os_perf_init(void)
+int os_perf_init(void)
 {
 	int ringsize, size;
 
@@ -843,7 +849,7 @@ os_perf_init(void)
 		s_profiling_recbuf = NULL;
 		return (-1);
 	}
-
+ //INITILIAZING THE ll  call chain here
 	ll_init(&s_ll_conf);
 	return (0);	
 }
@@ -1415,17 +1421,23 @@ static int uncore_start(perf_ctl_t *ctl, int nid)
 	if (!NODE_VALID(node))
 		return -1;
 	
-	if (pf_uncoreqpi_setup(node) != 0)
-		goto L_EXIT;
+	if (pf_uncoreqpi_setup(node) != 0){
+		printf("pf uncore qpi setup \n");
+		goto L_EXIT;}
 	
-	if (pf_uncoreimc_setup(node) != 0)
+	if (pf_uncoreimc_setup(node) != 0){
+		printf("pf uncore imc setup \n");
 		goto L_EXIT;
+	}
 
-	if (pf_uncoreqpi_start(node) != 0)
-		goto L_EXIT;
+	if (pf_uncoreqpi_start(node) != 0){
+		printf("pf uncore qpi start \n");
+		goto L_EXIT;}
 	
-	if (pf_uncoreimc_start(node) != 0)
+	if (pf_uncoreimc_start(node) != 0){
+		printf("pf uncore imc start \n");
 		goto L_EXIT;
+	}
 
 	ret = 0;
 
@@ -1438,9 +1450,11 @@ L_EXIT:
 	return ret;
 }
 
-int
-os_uncore_start(perf_ctl_t *ctl, perf_task_t *task)
+int os_uncore_start(perf_ctl_t *ctl, perf_task_t *task)
 {
+
+
+	printf("UNCORE PERF STARTED \n");
 	task_uncore_t *t = (task_uncore_t *)task;
 
 	if (uncore_start(ctl, t->nid) != 0) {
@@ -1455,8 +1469,7 @@ os_uncore_start(perf_ctl_t *ctl, perf_task_t *task)
 	return (0);
 }
 
-int
-os_uncore_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms)
+int os_uncore_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms)
 {
 	task_uncore_t *t = (task_uncore_t *)task;
 	node_t *node;
@@ -1481,8 +1494,7 @@ os_uncore_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms)
 	return (ret);
 }
 
-boolean_t
-os_perf_uncore_started(perf_ctl_t *ctl)
+boolean_t os_perf_uncore_started(perf_ctl_t *ctl)
 {
 	if (ctl->status == PERF_STATUS_UNCORE_STARTED)
 		return (B_TRUE);
@@ -1490,8 +1502,7 @@ os_perf_uncore_started(perf_ctl_t *ctl)
 	return (B_FALSE);
 }
 
-int
-os_perf_uncore_smpl(perf_ctl_t *ctl, int nid)
+int os_perf_uncore_smpl(perf_ctl_t *ctl, int nid)
 {
 	perf_task_t task;
 	task_uncore_t *t;

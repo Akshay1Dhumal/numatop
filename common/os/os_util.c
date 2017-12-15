@@ -566,7 +566,7 @@ os_sysfs_meminfo(int nid, node_meminfo_t *info)
 			i++;
 			continue;
 		}
-
+       // printf("Printing mem data ");
 		if (strstr(line, "Mapped:") != NULL) {
 			if (!memsize_parse(line, &info->mapped)) {
 				goto L_EXIT;
@@ -613,21 +613,28 @@ os_sysfs_cqm_llc_scale(const char *path, double *scale)
 int
 os_sysfs_uncore_qpi_init(qpi_info_t *qpi, int num)
 {
+
+//printf("\nOS QPI\n");
 	int i, fd, qpi_num = 0;
 	char path[PATH_MAX], buf[32];
 
 	for (i = 0; i < num; i++)
 	{
-		snprintf(path, PATH_MAX, "/sys/devices/uncore_qpi_%d/type", i);
-		if ((fd = open(path, O_RDONLY)) < 0)
-			return qpi_num;
+		snprintf(path, PATH_MAX, "/sys/devices/uncore_r3qpi_%d/type", i);
+		if ((fd = open(path, O_RDONLY)) < 0){
+		//printf("111111\n");	
+		return qpi_num;
+		//return 3;
+}
 
 		if (read(fd, buf, sizeof(buf)) < 0) {
 			close(fd);
-			return qpi_num;
+		//printf("222222");		
+		return qpi_num;
 		}
 
 		qpi_num++;
+		printf("ATOI BUF %d %d ",qpi_num,atoi(buf));
 		qpi[i].type = atoi(buf);
 		qpi[i].config = 0x600;
 		qpi[i].id = i;
@@ -636,7 +643,7 @@ os_sysfs_uncore_qpi_init(qpi_info_t *qpi, int num)
 		qpi[i].fd = INVALID_FD;
 		close(fd);
 	}
-
+printf("\nQPI NUM=%d\n",qpi_num);
 	return qpi_num;
 }
 

@@ -1741,9 +1741,9 @@ L_EXIT:
 	return NULL;
 }
 
-static boolean_t
-nodedetail_data_show(dyn_win_t *win, boolean_t *note_out)
+static boolean_t nodedetail_data_show(dyn_win_t *win, boolean_t *note_out)
 {
+	//printf("nodedetail_data_show \n");
 	dyn_nodedetail_t *dyn;
 	win_reg_t *r;
 	char content[WIN_LINECHAR_MAX], intval_buf[16];
@@ -1780,9 +1780,9 @@ nodedetail_data_show(dyn_win_t *win, boolean_t *note_out)
  * Display window on screen.
  * (window type: "WIN_TYPE_NODE_DETAIL")
  */
-static boolean_t
-nodedetail_win_draw(dyn_win_t *win)
+static boolean_t nodedetail_win_draw(dyn_win_t *win)
 {
+	//printf("nodedetail_windraw \n");
 	boolean_t note_out = B_FALSE, ret;
 
 	win_title_show();
@@ -2054,8 +2054,7 @@ win_size2str(uint64_t size, char *buf, int bufsize)
  * Build the readable string of data line which contains buffer address,
  * buffer size, access%, latency (nanosecond) and buffer description.
  */
-void
-win_lat_str_build(char *buf, int size, int idx, void *pv)
+void win_lat_str_build(char *buf, int size, int idx, void *pv) //printing the lat address access distribution
 {
 	lat_line_t *lines = (lat_line_t *)pv;
 	lat_line_t *line = &lines[idx];
@@ -2090,8 +2089,7 @@ win_lat_str_build(char *buf, int size, int idx, void *pv)
 	}
 }
 
-static void
-lat_line_get(win_reg_t *r, int idx, char *line, int size)
+static void lat_line_get(win_reg_t *r, int idx, char *line, int size)
 {
 	lat_line_t *lines;
 
@@ -2196,8 +2194,7 @@ bufdesc_cut(char *dst_desc, int dst_size, char *src_desc)
 /*
  * copyout the maps data to a new buffer.
  */
-lat_line_t *
-win_lat_buf_create(track_proc_t *proc, int lwpid, int *nlines)
+lat_line_t * win_lat_buf_create(track_proc_t *proc, int lwpid, int *nlines)
 {
 	map_proc_t *map = &proc->map;
 	map_entry_t *entry;
@@ -2227,9 +2224,7 @@ win_lat_buf_create(track_proc_t *proc, int lwpid, int *nlines)
  * process address space. If so, update the accessing statistics for
  * this buffer.
  */
-void
-win_lat_buf_fill(lat_line_t *lat_buf, int nlines, track_proc_t *proc,
-    track_lwp_t *lwp, int *lat)
+void win_lat_buf_fill(lat_line_t *lat_buf, int nlines, track_proc_t *proc, track_lwp_t *lwp, int *lat)
 {
 	perf_llrecgrp_t *grp;
 	os_perf_llrec_t *rec;
@@ -2242,7 +2237,7 @@ win_lat_buf_fill(lat_line_t *lat_buf, int nlines, track_proc_t *proc,
 	} else {
 		grp = &lwp->llrec_grp;
 	}
-
+	debug_print(NULL, 2, "WIN_LAT_BUFFER_FILL    Lines: %d nrec_cur %d \n",nlines,grp->nrec_cur);
 	for (i = 0; i < grp->nrec_cur; i++) {
 		rec = &grp->rec_arr[i];
 		os_lat_buf_hit(lat_buf, nlines, rec, &total_lat, &total_sample);
@@ -2281,9 +2276,9 @@ win_lat_cmp(const void *p1, const void *p2)
 /*
  * Get and display the process/thread latency related information.
  */
-static int
-lat_data_get(track_proc_t *proc, track_lwp_t *lwp, dyn_lat_t *dyn, int *lat)
+static int lat_data_get(track_proc_t *proc, track_lwp_t *lwp, dyn_lat_t *dyn, int *lat)
 {
+	debug_print(NULL, 2, "LAT_DATA_GET CALLED ..... !!!!!!!!!! %d\n", proc->pid);
 	lat_line_t *lat_buf;
 	int nlines, lwpid = 0;
 	char content[WIN_LINECHAR_MAX];
@@ -2296,8 +2291,8 @@ lat_data_get(track_proc_t *proc, track_lwp_t *lwp, dyn_lat_t *dyn, int *lat)
 	if (lwp != NULL) {
 		lwpid = lwp->id;
 	}
-
-	if ((lat_buf = win_lat_buf_create(proc, lwpid, &nlines)) == NULL) {
+	debug_print(NULL, 2, "For light weight process %d PID %d\n",lwpid, proc->pid);
+	if ((lat_buf = win_lat_buf_create(proc, lwpid, &nlines)) == NULL) { //creating LAT buffer to hold this data
 		debug_print(NULL, 2, "win_lat_buf_create failed (pid = %d)\n",
 		    proc->pid);
 		return (-1);
@@ -2306,7 +2301,7 @@ lat_data_get(track_proc_t *proc, track_lwp_t *lwp, dyn_lat_t *dyn, int *lat)
 	/*
 	 * Fill in the memory access information.
 	 */
-	win_lat_buf_fill(lat_buf, nlines, proc, lwp, lat);
+	win_lat_buf_fill(lat_buf, nlines, proc, lwp, lat); //FILLING HERE THE LAT DATA
 
 	/*
 	 * Sort the "lat_buf" according to the number of buffer accessing.
@@ -2338,16 +2333,15 @@ lat_data_get(track_proc_t *proc, track_lwp_t *lwp, dyn_lat_t *dyn, int *lat)
 	 * Display the buffer with statistics in scrolling buffer
 	 */
 	dyn->data.buf = (void *)lat_buf;
-	reg_scroll_show(&dyn->data, (void *)(dyn->data.buf),
-	    nlines, win_lat_str_build);
+	reg_scroll_show(&dyn->data, (void *)(dyn->data.buf),nlines, win_lat_str_build); //building the address string here
 	reg_refresh_nout(&dyn->data);
 
 	return (0);
 }
 
-boolean_t
-win_lat_data_show(track_proc_t *proc, dyn_lat_t *dyn, boolean_t *note_out)
+boolean_t win_lat_data_show(track_proc_t *proc, dyn_lat_t *dyn, boolean_t *note_out)
 {
+	debug_print(NULL, 2, "WIN_LAT_DATA_SHOW CALLED ..... !!!!!!!!!! %d\n", proc->pid);
 	win_reg_t *r;
 	int lat;
 	track_lwp_t *lwp = NULL;
@@ -2356,8 +2350,7 @@ win_lat_data_show(track_proc_t *proc, dyn_lat_t *dyn, boolean_t *note_out)
 	*note_out = B_FALSE;
 
 	if (dyn->lwpid != 0) {
-		if (((lwp = proc_lwp_find(proc, dyn->lwpid)) == NULL) ||
-		    (!os_procfs_lwp_valid(proc->pid, dyn->lwpid))) {
+		if (((lwp = proc_lwp_find(proc, dyn->lwpid)) == NULL) || (!os_procfs_lwp_valid(proc->pid, dyn->lwpid))) {
 			win_invalid_lwp();
 			*note_out = B_TRUE;
 			return (B_FALSE);
@@ -2418,8 +2411,7 @@ lat_win_scroll(dyn_win_t *win, int scroll_type)
  * and "WIN_TYPE_LAT_LWP" would be called when user hits the "ENTER" key
  * on selected data line.
  */
-static void
-lat_win_scrollenter(dyn_win_t *win)
+static void lat_win_scrollenter(dyn_win_t *win)
 {
 	dyn_lat_t *dyn = (dyn_lat_t *)(win->dyn);
 	win_reg_t *r = &dyn->data;
@@ -2564,8 +2556,7 @@ accdst_win_scroll(dyn_win_t *win, int scroll_type)
  * Initialize the display layout for window type
  * "WIN_TYPE_ACCDST_PROC" and "WIN_TYPE_ACCDST_LWP"
  */
-static void *
-accdst_dyn_create(page_t *page, win_type_t *type)
+static void * accdst_dyn_create(page_t *page, win_type_t *type)
 {
 	dyn_accdst_t *dyn;
 	void *buf;
@@ -2629,8 +2620,7 @@ accdst_win_destroy(dyn_win_t *win)
 	}
 }
 
-static int
-llrec2addr(track_proc_t *proc, track_lwp_t *lwp, void ***addr_arr,
+static int llrec2addr(track_proc_t *proc, track_lwp_t *lwp, void ***addr_arr,
 	int **lat_arr, int *addr_num)
 {
 	perf_llrecgrp_t *grp;
@@ -2653,7 +2643,7 @@ llrec2addr(track_proc_t *proc, track_lwp_t *lwp, void ***addr_arr,
 		ret = 0;
 		goto L_EXIT;
 	}
-
+	debug_print(NULL, 2, "LLREC2ADDR grp ->nrec_cur %d\n",grp->nrec_cur);
 	if ((addr_buf = zalloc(sizeof (void *) * grp->nrec_cur)) == NULL) {
 		goto L_EXIT;
 	}
@@ -2678,8 +2668,7 @@ L_EXIT:
 	return (ret);
 }
 
-static void
-accdst_data_save(map_nodedst_t *nodedst_arr, int nnodes_max, int naccess_total,
+static void accdst_data_save(map_nodedst_t *nodedst_arr, int nnodes_max, int naccess_total,
 	int nid_idx, accdst_line_t *line)
 {
 	node_t *node;
@@ -2706,8 +2695,7 @@ accdst_data_save(map_nodedst_t *nodedst_arr, int nnodes_max, int naccess_total,
 	}
 }
 
-static boolean_t
-accdst_data_show(track_proc_t *proc, dyn_accdst_t *dyn, boolean_t *note_out)
+static boolean_t accdst_data_show(track_proc_t *proc, dyn_accdst_t *dyn, boolean_t *note_out)
 {
 	win_reg_t *r;
 	track_lwp_t *lwp = NULL;
@@ -2728,18 +2716,17 @@ accdst_data_show(track_proc_t *proc, dyn_accdst_t *dyn, boolean_t *note_out)
 		return (B_FALSE);
 	}
 
-	if (llrec2addr(proc, lwp, &addr_arr, &lat_arr, &addr_num) != 0) {
+	if (llrec2addr(proc, lwp, &addr_arr, &lat_arr, &addr_num) != 0) { //putting all address latency in buffer and address also
 		goto L_EXIT;
 	}
+	debug_print(NULL, 2, "ADDRESS NUMBER IS %d size of int is %d\n",addr_num,sizeof(int));
 
 	(void) memset(nodedst_arr, 0, sizeof (map_nodedst_t) * NNODES_MAX);
 	if (addr_num > 0) {
-		if (map_addr2nodedst(proc->pid, addr_arr, lat_arr, addr_num,
-		    nodedst_arr, NNODES_MAX, &naccess_total) != 0) {
+		if (map_addr2nodedst(proc->pid, addr_arr, lat_arr, addr_num,nodedst_arr, NNODES_MAX, &naccess_total) != 0) {
 			goto L_EXIT;
 		}
 	}
-
 	r = &dyn->msg;
 	reg_erase(r);
 	disp_intval(intval_buf, 16);
@@ -2784,12 +2771,11 @@ accdst_data_show(track_proc_t *proc, dyn_accdst_t *dyn, boolean_t *note_out)
 	 * Save the per-node data with metrics in scrolling buffer.
 	 */
 	for (i = 0; i < nnodes; i++) {
-		accdst_data_save(nodedst_arr, NNODES_MAX, naccess_total, i,
-		    &lines[i]);
+		accdst_data_save(nodedst_arr, NNODES_MAX, naccess_total, i, &lines[i]); //copying data from nodedst_arr to lines[]
 	}
 
 	/*
-	 * Display the per-node data in scrolling buffer
+	 * Display the per-node data in scrolling buffer through "lines"
 	 */
 	reg_scroll_show(r, (void *)lines, nnodes, accdst_str_build);
 	reg_refresh_nout(r);
@@ -2813,13 +2799,11 @@ L_EXIT:
 
 	return (ret);
 }
-
 /*
  * The implementation of displaying window on screen for
  * window type "WIN_TYPE_ACCDST_PROC" and "WIN_TYPE_ACCDST_LWP"
  */
-static boolean_t
-accdst_win_draw(dyn_win_t *win)
+static boolean_t accdst_win_draw(dyn_win_t *win)
 {
 	dyn_accdst_t *dyn = (dyn_accdst_t *)(win->dyn);
 	track_proc_t *proc;
@@ -2835,7 +2819,6 @@ accdst_win_draw(dyn_win_t *win)
 	if (!note_out) {
 		win_note_show(NOTE_ACCDST);
 	}
-
 	proc_refcount_dec(proc);
 	reg_update_all();
 	return (ret);
@@ -3576,11 +3559,21 @@ win_fix_fini(void)
 /*
  * The common entry of window initialization
  */
-int
-win_dyn_init(void *p)
+int win_dyn_init(void *p)
 {
+	//printf("win_dyn_init \n");
+
+	/*
+	 * typedef struct _page {
+	cmd_t cmd;
+	struct _page *prev;
+	struct _page *next;
+	dyn_win_t dyn_win;
+} page_t;
+	 */
 	page_t *page = (page_t *)p;
 	dyn_win_t *win = &page->dyn_win;
+
 	cmd_id_t cmd_id = CMD_ID(&page->cmd);
 	int ret = -1;
 
@@ -3663,7 +3656,9 @@ win_dyn_init(void *p)
 		break;
 
 	case CMD_NODE_DETAIL_ID:
+		//printf("data show of node... \n");
 		if ((win->dyn = nodedetail_dyn_create(page)) == NULL) {
+			//printf("First time node detail data show active \n");
 			goto L_EXIT;
 		}
 
@@ -3708,7 +3703,6 @@ win_dyn_init(void *p)
 		if ((win->dyn = accdst_dyn_create(page, &win->type)) == NULL) {
 			goto L_EXIT;
 		}
-
 		win->draw = accdst_win_draw;
 		win->destroy = accdst_win_destroy;
 		win->scroll = accdst_win_scroll;

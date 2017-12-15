@@ -769,8 +769,7 @@ proc_group_refresh(pid_t *procs_new, int nproc_new)
 /*
  * Update the valid processes by scanning '/proc'
  */
-void
-proc_enum_update(pid_t pid)
+void proc_enum_update(pid_t pid)
 {
 	pid_t *procs_new;
 	int nproc_new;

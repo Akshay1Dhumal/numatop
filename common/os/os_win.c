@@ -20,7 +20,7 @@
  * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
  * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
  * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, fWHETHER IN
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
@@ -203,9 +203,9 @@ nodedetail_line_show(win_reg_t *reg, char *title, char *value, int line)
 /*
  * Display the performance statistics per node.
  */
-void
-os_nodedetail_data(dyn_nodedetail_t *dyn, win_reg_t *seg)
+void os_nodedetail_data(dyn_nodedetail_t *dyn, win_reg_t *seg) //akshay function for bandwidth
 {
+	//printf("os_nodedetail_data \n");
 	char s1[256], s2[32];
 	node_t *node;
 	win_countvalue_t value;
@@ -302,11 +302,33 @@ os_nodedetail_data(dyn_nodedetail_t *dyn, win_reg_t *seg)
 	 * Display the QPI link bandwidth
 	 */
 	qpi = &node->qpi;
+/*takes value 1 and value 2
+ * if (value2 > 0) {
+		r = (double)((double)value1 / (double)value2);
+	} else {
+		r = 0.0;
+	}
 
-	for (j = 0; j < qpi->qpi_num; j++) {		
-		snprintf(s1, sizeof (s1), "%.1fMB", 
-			ratio(qpi->qpi_info[j].value_scaled * 8, 1024 * 1024));
-		snprintf(s2, sizeof (s2), "QPI/UPI %d bandwidth:", j);
+
+
+	debug_print(NULL, 2, "Failed to load the process symbol "
+			"(pid = %d)\n", proc->pid);
+
+ */
+	for (j = 0; j < qpi->qpi_num; j++) {
+		double bw=ratio(qpi->qpi_info[j].value_scaled * 8, 1024 * 1024);
+		snprintf(s1, sizeof (s1), "%.1fMB", ratio(qpi->qpi_info[j].value_scaled * 8, 1024 * 1024));
+		snprintf(s2, sizeof (s2), "QPI/UPI %d bandwidth in Megbyte:", j);
+		debug_print(NULL, 2, "bandwidth qpi : "
+						" %d,  %lf "
+						"%" PRIu64  "\n",
+						j,bw,qpi->qpi_info[j].value_scaled);
+		//value_scaled gives may be total number of bits sent
+		//puts (s1);
+		//printf("\n printing .....");
+		//puts (s2);
+
+		//printf("\n printing .....");
 		nodedetail_line_show(seg, s2, s1, i++);	
 	}
 
@@ -459,9 +481,9 @@ os_callchain_list_show(dyn_callchain_t *dyn, track_proc_t *proc,
  * The implementation of displaying window on screen for
  * window type "WIN_TYPE_LAT_PROC" and "WIN_TYPE_LAT_LWP"
  */
-boolean_t
-os_lat_win_draw(dyn_win_t *win)
+boolean_t os_lat_win_draw(dyn_win_t *win)
 {
+	debug_print(NULL, 2, "OS_LAT_WIN_DRAW CALLED ..... !!!!!!!!!! \n");
 	dyn_lat_t *dyn = (dyn_lat_t *)(win->dyn);
 	track_proc_t *proc;
 	boolean_t note_out, ret;
@@ -486,7 +508,7 @@ os_lat_win_draw(dyn_win_t *win)
 	}
 
 	win_title_show();
-	ret = win_lat_data_show(proc, dyn, &note_out);
+	ret = win_lat_data_show(proc, dyn, &note_out); //from here it starts
 	if (!note_out) {
 		win_note_show(NOTE_LAT);
 	}
@@ -685,8 +707,7 @@ llcallchain_list_show(dyn_llcallchain_t *dyn, track_proc_t *proc,
 	return (0);
 }
 
-static void
-llcallchain_data_show(dyn_win_t *win, boolean_t *note_out)
+static void llcallchain_data_show(dyn_win_t *win, boolean_t *note_out)
 {
 	dyn_llcallchain_t *dyn;
 	pid_t pid;
@@ -781,22 +802,20 @@ os_llcallchain_win_scroll(dyn_win_t *win, int scroll_type)
  * points to a SMPL record. The function is responsible for checking and
  * comparing the record with the process address mapping.
  */
-void
-os_lat_buf_hit(lat_line_t *lat_buf, int nlines, os_perf_llrec_t *rec,
-	uint64_t *total_lat, uint64_t *total_sample)
+void os_lat_buf_hit(lat_line_t *lat_buf, int nlines, os_perf_llrec_t *rec,uint64_t *total_lat, uint64_t *total_sample)
 {
 	lat_line_t *line;
-
+	debug_print(NULL, 2, "OS LAT BUF HIT \n");
 	/*
 	 * Check if the linear address is located in a buffer in
 	 * process address space.
 	 */
-	if ((line = bsearch((void *)(rec->addr), lat_buf, nlines,
-	    sizeof (lat_line_t), bufaddr_cmp)) != NULL) {
+	if ((line = bsearch((void *)(rec->addr), lat_buf, nlines,sizeof (lat_line_t), bufaddr_cmp)) != NULL) {
 		/*
 		 * If the linear address is located in, that means this
 		 * buffer is accessed, so update the statistics of accessing.
 		 */
+		debug_print(NULL, 2, "Line access  %d latency %d \n",line->naccess,line->latency);
 		line->naccess++;
 		line->latency += rec->latency;
 		*total_lat += rec->latency;
@@ -805,10 +824,9 @@ os_lat_buf_hit(lat_line_t *lat_buf, int nlines, os_perf_llrec_t *rec,
 }
 
 
-static lat_line_t *
-latnode_buf_create(track_proc_t *proc, int lwpid, uint64_t addr,
-	uint64_t size, int *nlines)
+static lat_line_t * latnode_buf_create(track_proc_t *proc, int lwpid, uint64_t addr,uint64_t size, int *nlines)
 {
+	debug_print(NULL, 2, "LATENCY FOR NODE HERE ...... \n");
 	map_entry_t *entry;
 	numa_entry_t *numa_entry;
 	numa_map_t *numa_map;
@@ -838,9 +856,9 @@ latnode_buf_create(track_proc_t *proc, int lwpid, uint64_t addr,
 	return (buf);
 }
 
-static int
-latnode_data_get(track_proc_t *proc, track_lwp_t *lwp, dyn_latnode_t *dyn)
+static int latnode_data_get(track_proc_t *proc, track_lwp_t *lwp, dyn_latnode_t *dyn)
 {
+	debug_print(NULL, 2, "LAT NODE GET ...... \n");
 	lat_line_t *buf;
 	char content[WIN_LINECHAR_MAX];
 	int nlines, lwpid = 0, lat = 0;
@@ -854,8 +872,8 @@ latnode_data_get(track_proc_t *proc, track_lwp_t *lwp, dyn_latnode_t *dyn)
 		lwpid = lwp->id;		
 	}
 
-	if ((buf = latnode_buf_create(proc, lwpid, dyn->addr,
-		dyn->size, &nlines)) == NULL) {
+	if ((buf = latnode_buf_create(proc, lwpid, dyn->addr,dyn->size, &nlines)) == NULL)
+	{
 		reg_line_write(&dyn->caption, 1, ALIGN_LEFT,
 		    "Failed to get the process NUMA mapping!");
 		reg_refresh_nout(&dyn->caption);

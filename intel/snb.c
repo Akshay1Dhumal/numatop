@@ -66,5 +66,6 @@ snbep_ll_config(plat_event_config_t *cfg)
 int
 snb_offcore_num(void)
 {
+	//printf("sandy bridge \n");
 	return (2);
 }

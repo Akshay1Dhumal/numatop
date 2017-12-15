@@ -1,0 +1,3069 @@
+0: Execute 'mount -t resctrl resctrl /sys/fs/resctrl 2>/dev/null' ok
+0: 2 QPI/UPI links per node
+0: 8 memory controllers per node
+0: calibrate_cpuinfo: nsofclk = 0.4348, clkofsec = 2300000000
+0: Detected 64 online CPUs
+0: Enabled CQM/MBM: no
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: os_profiling_start success
+5: pf_ll_setup 
+for CPU0
+5: pf_ll_setup 
+for CPU1
+5: pf_ll_setup 
+for CPU2
+5: pf_ll_setup 
+for CPU3
+5: pf_ll_setup 
+for CPU4
+5: pf_ll_setup 
+for CPU5
+5: pf_ll_setup 
+for CPU6
+5: pf_ll_setup 
+for CPU7
+5: pf_ll_setup 
+for CPU32
+5: pf_ll_setup 
+for CPU33
+5: pf_ll_setup 
+for CPU34
+5: pf_ll_setup 
+for CPU35
+5: pf_ll_setup 
+for CPU36
+5: pf_ll_setup 
+for CPU37
+5: pf_ll_setup 
+for CPU38
+5: pf_ll_setup 
+for CPU39
+5: pf_ll_setup 
+for CPU8
+5: pf_ll_setup 
+for CPU9
+5: pf_ll_setup 
+for CPU10
+5: pf_ll_setup 
+for CPU11
+5: pf_ll_setup 
+for CPU12
+5: pf_ll_setup 
+for CPU13
+5: pf_ll_setup 
+for CPU14
+5: pf_ll_setup 
+for CPU15
+5: pf_ll_setup 
+for CPU40
+5: pf_ll_setup 
+for CPU41
+5: pf_ll_setup 
+for CPU42
+5: pf_ll_setup 
+for CPU43
+5: pf_ll_setup 
+for CPU44
+5: pf_ll_setup 
+for CPU45
+5: pf_ll_setup 
+for CPU46
+5: pf_ll_setup 
+for CPU47
+5: pf_ll_setup 
+for CPU16
+5: pf_ll_setup 
+for CPU17
+5: pf_ll_setup 
+for CPU18
+5: pf_ll_setup 
+for CPU19
+5: pf_ll_setup 
+for CPU20
+5: pf_ll_setup 
+for CPU21
+5: pf_ll_setup 
+for CPU22
+5: pf_ll_setup 
+for CPU23
+5: pf_ll_setup 
+for CPU48
+5: pf_ll_setup 
+for CPU49
+5: pf_ll_setup 
+for CPU50
+5: pf_ll_setup 
+for CPU51
+5: pf_ll_setup 
+for CPU52
+5: pf_ll_setup 
+for CPU53
+5: pf_ll_setup 
+for CPU54
+5: pf_ll_setup 
+for CPU55
+5: pf_ll_setup 
+for CPU24
+5: pf_ll_setup 
+for CPU25
+5: pf_ll_setup 
+for CPU26
+5: pf_ll_setup 
+for CPU27
+5: pf_ll_setup 
+for CPU28
+5: pf_ll_setup 
+for CPU29
+5: pf_ll_setup 
+for CPU30
+5: pf_ll_setup 
+for CPU31
+5: pf_ll_setup 
+for CPU56
+5: pf_ll_setup 
+for CPU57
+5: pf_ll_setup 
+for CPU58
+5: pf_ll_setup 
+for CPU59
+5: pf_ll_setup 
+for CPU60
+5: pf_ll_setup 
+for CPU61
+5: pf_ll_setup 
+for CPU62
+5: pf_ll_setup 
+for CPU63
+5: ll_start success
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 40 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 713 , addr 140493081742876 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 40 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 607 , addr 140493039675612 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 40 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 183 , addr 140492937484148 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 40 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 596 , addr 140493039451476 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 40 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 727 , addr 140493039906256 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 40 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 1142 , addr 140492915027608 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 40 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 272 , addr 140493035104920 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 40 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 174 , addr 140492821737908 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 40 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 623 , addr 140493039047404 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 112 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 112 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 481 , addr 18446612235914933856 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 40 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 0 ,latency 280 , addr 140492931692228 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 136 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 136 IP_NJUM 32 
+6: sample read  pid 0, tid 0,CPU 0 ,latency 144 , addr 18446612167119617120 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 136 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 136 IP_NJUM 32 
+6: sample read  pid 0, tid 0,CPU 0 ,latency 221 , addr 18446612167191969292 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 136 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 136 IP_NJUM 32 
+6: sample read  pid 0, tid 0,CPU 0 ,latency 138 , addr 18446612201276187272 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: FOR CPU 0 Record num are 11 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 713 
+6: LATENCY FROM LLREC_ADD 713 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 607 
+6: LATENCY FROM LLREC_ADD 607 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 183 
+6: LATENCY FROM LLREC_ADD 183 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 596 
+6: LATENCY FROM LLREC_ADD 596 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 727 
+6: LATENCY FROM LLREC_ADD 727 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 1142 
+6: LATENCY FROM LLREC_ADD 1142 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 272 
+6: LATENCY FROM LLREC_ADD 272 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 174 
+6: LATENCY FROM LLREC_ADD 174 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 623 
+6: LATENCY FROM LLREC_ADD 623 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 481 
+6: LATENCY FROM LLREC_ADD 481 
+6: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+6: LATENCY FROM LLREC_ADD 280 
+6: LATENCY FROM LLREC_ADD 280 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140355, tid 140358,CPU 6 ,latency 133 , addr 140641257193880 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: FOR CPU 6 Record num are 1 
+6: Received task  PID 140355 TID:  140358 CPU  6 cpu2 6 
+6: LATENCY FROM LLREC_ADD 133 
+6: LATENCY FROM LLREC_ADD 133 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 386 , addr 140493042672888 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 571 , addr 140493018310568 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 257 , addr 140492827605772 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 245 , addr 140492933278272 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 96 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 96 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 163 , addr 18446612151004759008 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 280 , addr 140493038270532 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 237 , addr 140492829352064 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 210 , addr 140492831412640 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 132 , addr 140492830670708 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 280 , addr 140493084220752 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 16 ,latency 210 , addr 140492832401600 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 758 , addr 64721728 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 511 , addr 140493029216744 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 681 , addr 31776404 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 504 , addr 83853820 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 190 , addr 140492821725656 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 243 , addr 140492821565924 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 169 , addr 140492820803608 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 154 , addr 78895324 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 263 , addr 83058788 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 277 , addr 140492822983120 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 175 , addr 140492820279784 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 240 , addr 78786596 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 203 , addr 84354620 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 526 , addr 140492822544412 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 219 , addr 140492820365816 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 139 , addr 78917212 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 80 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 80 IP_NJUM 32 
+6: sample read  pid 0, tid 0,CPU 16 ,latency 173 , addr 18446612235828680816 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 141 , addr 140492823228416 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 245 , addr 140492821676496 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 180 , addr 78454868 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 391 , addr 84230124 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 710 , addr 140492820300304 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 386 , addr 78778412 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140316,CPU 16 ,latency 523 , addr 78762168 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: FOR CPU 16 Record num are 34 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 386 
+6: LATENCY FROM LLREC_ADD 386 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 571 
+6: LATENCY FROM LLREC_ADD 571 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 257 
+6: LATENCY FROM LLREC_ADD 257 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 245 
+6: LATENCY FROM LLREC_ADD 245 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 163 
+6: LATENCY FROM LLREC_ADD 163 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 280 
+6: LATENCY FROM LLREC_ADD 280 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 237 
+6: LATENCY FROM LLREC_ADD 237 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 210 
+6: LATENCY FROM LLREC_ADD 210 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 132 
+6: LATENCY FROM LLREC_ADD 132 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 280 
+6: LATENCY FROM LLREC_ADD 280 
+6: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 210 
+6: LATENCY FROM LLREC_ADD 210 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 758 
+6: LATENCY FROM LLREC_ADD 758 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 511 
+6: LATENCY FROM LLREC_ADD 511 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 681 
+6: LATENCY FROM LLREC_ADD 681 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 504 
+6: LATENCY FROM LLREC_ADD 504 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 190 
+6: LATENCY FROM LLREC_ADD 190 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 243 
+6: LATENCY FROM LLREC_ADD 243 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 169 
+6: LATENCY FROM LLREC_ADD 169 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 154 
+6: LATENCY FROM LLREC_ADD 154 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 263 
+6: LATENCY FROM LLREC_ADD 263 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 277 
+6: LATENCY FROM LLREC_ADD 277 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 175 
+6: LATENCY FROM LLREC_ADD 175 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 240 
+6: LATENCY FROM LLREC_ADD 240 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 203 
+6: LATENCY FROM LLREC_ADD 203 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 526 
+6: LATENCY FROM LLREC_ADD 526 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 219 
+6: LATENCY FROM LLREC_ADD 219 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 139 
+6: LATENCY FROM LLREC_ADD 139 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 141 
+6: LATENCY FROM LLREC_ADD 141 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 245 
+6: LATENCY FROM LLREC_ADD 245 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 180 
+6: LATENCY FROM LLREC_ADD 180 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 391 
+6: LATENCY FROM LLREC_ADD 391 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 710 
+6: LATENCY FROM LLREC_ADD 710 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 386 
+6: LATENCY FROM LLREC_ADD 386 
+6: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+6: LATENCY FROM LLREC_ADD 523 
+6: LATENCY FROM LLREC_ADD 523 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 64 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 64 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 17 ,latency 226 , addr 18446612166843870728 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 17 ,latency 294 , addr 140492825526720 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 17 ,latency 201 , addr 83417224 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 17 ,latency 268 , addr 140492824056260 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 17 ,latency 244 , addr 79835148 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 17 ,latency 172 , addr 79869108 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 17 ,latency 922 , addr 79118248 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: FOR CPU 17 Record num are 7 
+6: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+6: LATENCY FROM LLREC_ADD 226 
+6: LATENCY FROM LLREC_ADD 226 
+6: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+6: LATENCY FROM LLREC_ADD 294 
+6: LATENCY FROM LLREC_ADD 294 
+6: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+6: LATENCY FROM LLREC_ADD 201 
+6: LATENCY FROM LLREC_ADD 201 
+6: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+6: LATENCY FROM LLREC_ADD 268 
+6: LATENCY FROM LLREC_ADD 268 
+6: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+6: LATENCY FROM LLREC_ADD 244 
+6: LATENCY FROM LLREC_ADD 244 
+6: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+6: LATENCY FROM LLREC_ADD 172 
+6: LATENCY FROM LLREC_ADD 172 
+6: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+6: LATENCY FROM LLREC_ADD 922 
+6: LATENCY FROM LLREC_ADD 922 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 24 ,latency 216 , addr 84333960 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 24 ,latency 326 , addr 84353212 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 32 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 24 ,latency 427 , addr 83570168 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: ll_sample_read: Inside 
+6: pf_ll_SAMPLE READ. SIZE : 24 
+  6: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+6: sample read  pid 140316, tid 140319,CPU 24 ,latency 196 , addr 79496972 
+6: ll recbuf update 
+6: Inside infinite for loop 
+6: FOR CPU 24 Record num are 4 
+6: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+6: LATENCY FROM LLREC_ADD 216 
+6: LATENCY FROM LLREC_ADD 216 
+6: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+6: LATENCY FROM LLREC_ADD 326 
+6: LATENCY FROM LLREC_ADD 326 
+6: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+6: LATENCY FROM LLREC_ADD 427 
+6: LATENCY FROM LLREC_ADD 427 
+6: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+6: LATENCY FROM LLREC_ADD 196 
+6: LATENCY FROM LLREC_ADD 196 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: pf_ll_RECORD 
+6: Inside infinite for loop 
+6: OS_LAT_WIN_DRAW CALLED ..... !!!!!!!!!! 
+6: WIN_LAT_DATA_SHOW CALLED ..... !!!!!!!!!! 140316
+6: LAT_DATA_GET CALLED ..... !!!!!!!!!! 140316
+6: For light weight process 140319 PID 140316
+6: WIN_LAT_BUFFER_FILL    Lines: 45 nrec_cur 22 
+6: OS LAT BUF HIT 
+6: Line access  0 latency 0 
+6: OS LAT BUF HIT 
+6: Line access  1 latency 386 
+6: OS LAT BUF HIT 
+6: Line access  0 latency 0 
+6: OS LAT BUF HIT 
+6: Line access  0 latency 0 
+6: OS LAT BUF HIT 
+6: OS LAT BUF HIT 
+6: Line access  2 latency 957 
+6: OS LAT BUF HIT 
+6: Line access  1 latency 257 
+6: OS LAT BUF HIT 
+6: Line access  2 latency 494 
+6: OS LAT BUF HIT 
+6: Line access  3 latency 704 
+6: OS LAT BUF HIT 
+6: Line access  3 latency 1237 
+6: OS LAT BUF HIT 
+6: Line access  4 latency 836 
+6: OS LAT BUF HIT 
+6: OS LAT BUF HIT 
+6: Line access  5 latency 1046 
+6: OS LAT BUF HIT 
+6: Line access  0 latency 0 
+6: OS LAT BUF HIT 
+6: Line access  6 latency 1340 
+6: OS LAT BUF HIT 
+6: Line access  1 latency 201 
+6: OS LAT BUF HIT 
+6: Line access  2 latency 445 
+6: OS LAT BUF HIT 
+6: Line access  3 latency 617 
+6: OS LAT BUF HIT 
+6: Line access  4 latency 1539 
+6: OS LAT BUF HIT 
+6: Line access  5 latency 1755 
+6: OS LAT BUF HIT 
+6: Line access  6 latency 2081 
+6: OS LAT BUF HIT 
+6: Line access  7 latency 2508 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 0 ,latency 140 , addr 83226116 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 136 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 136 IP_NJUM 32 
+7: sample read  pid 0, tid 0,CPU 0 ,latency 461 , addr 18446612201212301080 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: FOR CPU 0 Record num are 1 
+7: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+7: LATENCY FROM LLREC_ADD 140 
+7: LATENCY FROM LLREC_ADD 140 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 1 ,latency 152 , addr 79728700 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 1 ,latency 154 , addr 140492830126556 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 1 ,latency 256 , addr 140492825727808 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 1 ,latency 183 , addr 140492831904212 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 1 ,latency 526 , addr 140492829966868 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 1 ,latency 330 , addr 83467020 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 1 ,latency 189 , addr 28042316 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 1 ,latency 521 , addr 84267516 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 1 ,latency 586 , addr 140492827058872 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 1 ,latency 242 , addr 79295560 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 40 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 1 ,latency 272 , addr 140493081714688 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 40 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 1 ,latency 628 , addr 140492815957328 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 40 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 1 ,latency 592 , addr 140492816564536 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 40 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 1 ,latency 608 , addr 140493034809452 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 40 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 1 ,latency 592 , addr 140492818585688 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 40 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 1 ,latency 295 , addr 140493040130036 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 40 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 1 ,latency 674 , addr 140493035428880 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 40 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 1 ,latency 275 , addr 140492930505416 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 40 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 1 ,latency 266 , addr 140492937913592 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: FOR CPU 1 Record num are 19 
+7: Received task  PID 140316 TID:  140319 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 152 
+7: LATENCY FROM LLREC_ADD 152 
+7: Received task  PID 140316 TID:  140319 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 154 
+7: LATENCY FROM LLREC_ADD 154 
+7: Received task  PID 140316 TID:  140319 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 256 
+7: LATENCY FROM LLREC_ADD 256 
+7: Received task  PID 140316 TID:  140319 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 183 
+7: LATENCY FROM LLREC_ADD 183 
+7: Received task  PID 140316 TID:  140319 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 526 
+7: LATENCY FROM LLREC_ADD 526 
+7: Received task  PID 140316 TID:  140319 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 330 
+7: LATENCY FROM LLREC_ADD 330 
+7: Received task  PID 140316 TID:  140319 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 189 
+7: LATENCY FROM LLREC_ADD 189 
+7: Received task  PID 140316 TID:  140319 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 521 
+7: LATENCY FROM LLREC_ADD 521 
+7: Received task  PID 140316 TID:  140319 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 586 
+7: LATENCY FROM LLREC_ADD 586 
+7: Received task  PID 140316 TID:  140319 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 242 
+7: LATENCY FROM LLREC_ADD 242 
+7: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 272 
+7: LATENCY FROM LLREC_ADD 272 
+7: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 628 
+7: LATENCY FROM LLREC_ADD 628 
+7: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 592 
+7: LATENCY FROM LLREC_ADD 592 
+7: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 608 
+7: LATENCY FROM LLREC_ADD 608 
+7: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 592 
+7: LATENCY FROM LLREC_ADD 592 
+7: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 295 
+7: LATENCY FROM LLREC_ADD 295 
+7: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 674 
+7: LATENCY FROM LLREC_ADD 674 
+7: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 275 
+7: LATENCY FROM LLREC_ADD 275 
+7: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+7: LATENCY FROM LLREC_ADD 266 
+7: LATENCY FROM LLREC_ADD 266 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 112 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 112 IP_NJUM 32 
+7: sample read  pid 0, tid 0,CPU 2 ,latency 306 , addr 18446612270151794292 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 112 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 112 IP_NJUM 32 
+7: sample read  pid 0, tid 0,CPU 2 ,latency 364 , addr 18446612270127188064 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 104 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 104 IP_NJUM 32 
+7: sample read  pid 140355, tid 140358,CPU 6 ,latency 531 , addr 18446612167185768328 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: FOR CPU 6 Record num are 1 
+7: Received task  PID 140355 TID:  140358 CPU  6 cpu2 6 
+7: LATENCY FROM LLREC_ADD 531 
+7: LATENCY FROM LLREC_ADD 531 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 16 ,latency 334 , addr 78926420 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 16 ,latency 206 , addr 140492821696984 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 16 ,latency 272 , addr 140492823827360 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 16 ,latency 201 , addr 83196460 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 16 ,latency 392 , addr 84502144 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 16 ,latency 408 , addr 83427624 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 16 ,latency 288 , addr 78786616 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 16 ,latency 148 , addr 140492820738568 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 96 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 96 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 16 ,latency 147 , addr 18446612235598931112 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140316,CPU 16 ,latency 375 , addr 83830460 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 16 ,latency 679 , addr 140492931881160 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 16 ,latency 677 , addr 140492983269800 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 16 ,latency 271 , addr 140493086696756 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 16 ,latency 241 , addr 140492904302860 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 16 ,latency 278 , addr 140492828677928 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 16 ,latency 287 , addr 140492832618016 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 16 ,latency 590 , addr 140493041244248 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 16 ,latency 160 , addr 140492828516520 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 32 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 16 ,latency 249 , addr 140493042345028 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: FOR CPU 16 Record num are 19 
+7: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 334 
+7: LATENCY FROM LLREC_ADD 334 
+7: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 206 
+7: LATENCY FROM LLREC_ADD 206 
+7: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 272 
+7: LATENCY FROM LLREC_ADD 272 
+7: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 201 
+7: LATENCY FROM LLREC_ADD 201 
+7: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 392 
+7: LATENCY FROM LLREC_ADD 392 
+7: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 408 
+7: LATENCY FROM LLREC_ADD 408 
+7: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 288 
+7: LATENCY FROM LLREC_ADD 288 
+7: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 148 
+7: LATENCY FROM LLREC_ADD 148 
+7: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 147 
+7: LATENCY FROM LLREC_ADD 147 
+7: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 375 
+7: LATENCY FROM LLREC_ADD 375 
+7: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 679 
+7: LATENCY FROM LLREC_ADD 679 
+7: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 677 
+7: LATENCY FROM LLREC_ADD 677 
+7: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 271 
+7: LATENCY FROM LLREC_ADD 271 
+7: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 241 
+7: LATENCY FROM LLREC_ADD 241 
+7: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 278 
+7: LATENCY FROM LLREC_ADD 278 
+7: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 287 
+7: LATENCY FROM LLREC_ADD 287 
+7: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 590 
+7: LATENCY FROM LLREC_ADD 590 
+7: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 160 
+7: LATENCY FROM LLREC_ADD 160 
+7: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+7: LATENCY FROM LLREC_ADD 249 
+7: LATENCY FROM LLREC_ADD 249 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 24 ,latency 250 , addr 79486980 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 24 ,latency 255 , addr 79991424 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 24 ,latency 531 , addr 140492829635048 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 24 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+7: sample read  pid 140316, tid 140319,CPU 24 ,latency 164 , addr 140492829537948 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: ll_sample_read: Inside 
+7: pf_ll_SAMPLE READ. SIZE : 72 
+  7: pf_ll_start: pf_event_open is success. SIZE(NR) : 72 IP_NJUM 32 
+7: sample read  pid 0, tid 0,CPU 24 ,latency 457 , addr 18446612166843869792 
+7: ll recbuf update 
+7: Inside infinite for loop 
+7: FOR CPU 24 Record num are 4 
+7: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+7: LATENCY FROM LLREC_ADD 250 
+7: LATENCY FROM LLREC_ADD 250 
+7: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+7: LATENCY FROM LLREC_ADD 255 
+7: LATENCY FROM LLREC_ADD 255 
+7: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+7: LATENCY FROM LLREC_ADD 531 
+7: LATENCY FROM LLREC_ADD 531 
+7: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+7: LATENCY FROM LLREC_ADD 164 
+7: LATENCY FROM LLREC_ADD 164 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: pf_ll_RECORD 
+7: Inside infinite for loop 
+7: OS_LAT_WIN_DRAW CALLED ..... !!!!!!!!!! 
+7: WIN_LAT_DATA_SHOW CALLED ..... !!!!!!!!!! 140316
+7: LAT_DATA_GET CALLED ..... !!!!!!!!!! 140316
+7: For light weight process 140319 PID 140316
+7: WIN_LAT_BUFFER_FILL    Lines: 45 nrec_cur 24 
+7: OS LAT BUF HIT 
+7: Line access  0 latency 0 
+7: OS LAT BUF HIT 
+7: Line access  0 latency 0 
+7: OS LAT BUF HIT 
+7: Line access  1 latency 154 
+7: OS LAT BUF HIT 
+7: Line access  2 latency 410 
+7: OS LAT BUF HIT 
+7: Line access  3 latency 593 
+7: OS LAT BUF HIT 
+7: Line access  1 latency 152 
+7: OS LAT BUF HIT 
+7: Line access  2 latency 482 
+7: OS LAT BUF HIT 
+7: Line access  3 latency 671 
+7: OS LAT BUF HIT 
+7: Line access  4 latency 1119 
+7: OS LAT BUF HIT 
+7: Line access  4 latency 1192 
+7: OS LAT BUF HIT 
+7: Line access  5 latency 1434 
+7: OS LAT BUF HIT 
+7: Line access  0 latency 0 
+7: OS LAT BUF HIT 
+7: Line access  0 latency 0 
+7: OS LAT BUF HIT 
+7: Line access  1 latency 677 
+7: OS LAT BUF HIT 
+7: Line access  5 latency 1705 
+7: OS LAT BUF HIT 
+7: Line access  6 latency 1946 
+7: OS LAT BUF HIT 
+7: Line access  7 latency 2224 
+7: OS LAT BUF HIT 
+7: Line access  2 latency 948 
+7: OS LAT BUF HIT 
+7: Line access  8 latency 2511 
+7: OS LAT BUF HIT 
+7: Line access  3 latency 1538 
+7: OS LAT BUF HIT 
+7: Line access  6 latency 1842 
+7: OS LAT BUF HIT 
+7: Line access  7 latency 2092 
+7: OS LAT BUF HIT 
+7: Line access  9 latency 2671 
+7: OS LAT BUF HIT 
+7: Line access  10 latency 3202 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 136 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 136 IP_NJUM 32 
+8: sample read  pid 0, tid 0,CPU 0 ,latency 132 , addr 18446612235596668040 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 136 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 136 IP_NJUM 32 
+8: sample read  pid 0, tid 0,CPU 0 ,latency 142 , addr 18446612167191969292 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 0 ,latency 383 , addr 140493038371248 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 0 ,latency 502 , addr 140493037112716 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 0 ,latency 553 , addr 140492827478068 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 120 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 120 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 0 ,latency 589 , addr 18446612234766985120 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 24 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 0 ,latency 805 , addr 38346992 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 0 ,latency 693 , addr 140493084918568 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 0 ,latency 220 , addr 140492821834048 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 0 ,latency 260 , addr 140492822410908 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 0 ,latency 276 , addr 140493035794600 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: FOR CPU 0 Record num are 9 
+8: Received task  PID 140316 TID:  140319 CPU  0 cpu2 0 
+8: LATENCY FROM LLREC_ADD 383 
+8: LATENCY FROM LLREC_ADD 383 
+8: Received task  PID 140316 TID:  140319 CPU  0 cpu2 0 
+8: LATENCY FROM LLREC_ADD 502 
+8: LATENCY FROM LLREC_ADD 502 
+8: Received task  PID 140316 TID:  140319 CPU  0 cpu2 0 
+8: LATENCY FROM LLREC_ADD 553 
+8: LATENCY FROM LLREC_ADD 553 
+8: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+8: LATENCY FROM LLREC_ADD 589 
+8: LATENCY FROM LLREC_ADD 589 
+8: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+8: LATENCY FROM LLREC_ADD 805 
+8: LATENCY FROM LLREC_ADD 805 
+8: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+8: LATENCY FROM LLREC_ADD 693 
+8: LATENCY FROM LLREC_ADD 693 
+8: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+8: LATENCY FROM LLREC_ADD 220 
+8: LATENCY FROM LLREC_ADD 220 
+8: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+8: LATENCY FROM LLREC_ADD 260 
+8: LATENCY FROM LLREC_ADD 260 
+8: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+8: LATENCY FROM LLREC_ADD 276 
+8: LATENCY FROM LLREC_ADD 276 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 1 ,latency 205 , addr 140492822848848 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 1 ,latency 276 , addr 140492938213092 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 1 ,latency 254 , addr 140492822651508 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 1 ,latency 642 , addr 140493023884880 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: FOR CPU 1 Record num are 4 
+8: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+8: LATENCY FROM LLREC_ADD 205 
+8: LATENCY FROM LLREC_ADD 205 
+8: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+8: LATENCY FROM LLREC_ADD 276 
+8: LATENCY FROM LLREC_ADD 276 
+8: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+8: LATENCY FROM LLREC_ADD 254 
+8: LATENCY FROM LLREC_ADD 254 
+8: Received task  PID 140316 TID:  140316 CPU  1 cpu2 1 
+8: LATENCY FROM LLREC_ADD 642 
+8: LATENCY FROM LLREC_ADD 642 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 112 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 112 IP_NJUM 32 
+8: sample read  pid 140355, tid 140358,CPU 6 ,latency 373 , addr 18446612163709992008 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: FOR CPU 6 Record num are 1 
+8: Received task  PID 140355 TID:  140358 CPU  6 cpu2 6 
+8: LATENCY FROM LLREC_ADD 373 
+8: LATENCY FROM LLREC_ADD 373 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 24 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 16 ,latency 220 , addr 34747728 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 16 ,latency 209 , addr 140492830809376 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 16 ,latency 220 , addr 140492831565884 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 24 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 455 , addr 9466512 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 104 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 104 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 239 , addr 18446612235738263416 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 569 , addr 140493078308824 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 345 , addr 140493116699160 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 24 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 218 , addr 140492913061976 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 571 , addr 140728688138620 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 72 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 72 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 273 , addr 18446719886050130560 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 683 , addr 140493029229080 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 426 , addr 140493039811096 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 197 , addr 140492816651024 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 335 , addr 140493081776028 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 411 , addr 140493085633108 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 286 , addr 140492818568808 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 40 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+8: sample read  pid 140316, tid 140316,CPU 16 ,latency 259 , addr 140492819469748 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 16 ,latency 302 , addr 140493025238432 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 16 ,latency 301 , addr 140493025867544 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 16 ,latency 130 , addr 140492829529804 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 16 ,latency 359 , addr 140492940395840 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 16 ,latency 239 , addr 140492831061436 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 16 ,latency 143 , addr 140492831792604 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: FOR CPU 16 Record num are 23 
+8: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 220 
+8: LATENCY FROM LLREC_ADD 220 
+8: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 209 
+8: LATENCY FROM LLREC_ADD 209 
+8: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 220 
+8: LATENCY FROM LLREC_ADD 220 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 455 
+8: LATENCY FROM LLREC_ADD 455 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 239 
+8: LATENCY FROM LLREC_ADD 239 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 569 
+8: LATENCY FROM LLREC_ADD 569 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 345 
+8: LATENCY FROM LLREC_ADD 345 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 218 
+8: LATENCY FROM LLREC_ADD 218 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 571 
+8: LATENCY FROM LLREC_ADD 571 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 273 
+8: LATENCY FROM LLREC_ADD 273 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 683 
+8: LATENCY FROM LLREC_ADD 683 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 426 
+8: LATENCY FROM LLREC_ADD 426 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 197 
+8: LATENCY FROM LLREC_ADD 197 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 335 
+8: LATENCY FROM LLREC_ADD 335 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 411 
+8: LATENCY FROM LLREC_ADD 411 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 286 
+8: LATENCY FROM LLREC_ADD 286 
+8: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 259 
+8: LATENCY FROM LLREC_ADD 259 
+8: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 302 
+8: LATENCY FROM LLREC_ADD 302 
+8: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 301 
+8: LATENCY FROM LLREC_ADD 301 
+8: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 130 
+8: LATENCY FROM LLREC_ADD 130 
+8: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 359 
+8: LATENCY FROM LLREC_ADD 359 
+8: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 239 
+8: LATENCY FROM LLREC_ADD 239 
+8: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+8: LATENCY FROM LLREC_ADD 143 
+8: LATENCY FROM LLREC_ADD 143 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 24 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 17 ,latency 214 , addr 140493095226884 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 88 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 88 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 17 ,latency 209 , addr 18446612152007862320 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 17 ,latency 634 , addr 140492938728148 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 17 ,latency 798 , addr 140492903719492 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 24 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 17 ,latency 245 , addr 32946368 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 17 ,latency 202 , addr 140492825785964 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: FOR CPU 17 Record num are 6 
+8: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+8: LATENCY FROM LLREC_ADD 214 
+8: LATENCY FROM LLREC_ADD 214 
+8: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+8: LATENCY FROM LLREC_ADD 209 
+8: LATENCY FROM LLREC_ADD 209 
+8: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+8: LATENCY FROM LLREC_ADD 634 
+8: LATENCY FROM LLREC_ADD 634 
+8: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+8: LATENCY FROM LLREC_ADD 798 
+8: LATENCY FROM LLREC_ADD 798 
+8: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+8: LATENCY FROM LLREC_ADD 245 
+8: LATENCY FROM LLREC_ADD 245 
+8: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+8: LATENCY FROM LLREC_ADD 202 
+8: LATENCY FROM LLREC_ADD 202 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: ll_sample_read: Inside 
+8: pf_ll_SAMPLE READ. SIZE : 32 
+  8: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+8: sample read  pid 140316, tid 140319,CPU 24 ,latency 260 , addr 140492904503308 
+8: ll recbuf update 
+8: Inside infinite for loop 
+8: FOR CPU 24 Record num are 1 
+8: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+8: LATENCY FROM LLREC_ADD 260 
+8: LATENCY FROM LLREC_ADD 260 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: pf_ll_RECORD 
+8: Inside infinite for loop 
+8: OS_LAT_WIN_DRAW CALLED ..... !!!!!!!!!! 
+8: WIN_LAT_DATA_SHOW CALLED ..... !!!!!!!!!! 140316
+8: LAT_DATA_GET CALLED ..... !!!!!!!!!! 140316
+8: For light weight process 140319 PID 140316
+8: WIN_LAT_BUFFER_FILL    Lines: 45 nrec_cur 19 
+8: OS LAT BUF HIT 
+8: Line access  0 latency 0 
+8: OS LAT BUF HIT 
+8: Line access  1 latency 383 
+8: OS LAT BUF HIT 
+8: Line access  0 latency 0 
+8: OS LAT BUF HIT 
+8: Line access  0 latency 0 
+8: OS LAT BUF HIT 
+8: Line access  1 latency 553 
+8: OS LAT BUF HIT 
+8: Line access  2 latency 762 
+8: OS LAT BUF HIT 
+8: Line access  2 latency 885 
+8: OS LAT BUF HIT 
+8: Line access  3 latency 1187 
+8: OS LAT BUF HIT 
+8: Line access  3 latency 982 
+8: OS LAT BUF HIT 
+8: Line access  0 latency 0 
+8: OS LAT BUF HIT 
+8: Line access  4 latency 1112 
+8: OS LAT BUF HIT 
+8: Line access  5 latency 1351 
+8: OS LAT BUF HIT 
+8: Line access  0 latency 0 
+8: OS LAT BUF HIT 
+8: OS LAT BUF HIT 
+8: Line access  1 latency 359 
+8: OS LAT BUF HIT 
+8: Line access  6 latency 1494 
+8: OS LAT BUF HIT 
+8: Line access  1 latency 220 
+8: OS LAT BUF HIT 
+8: Line access  7 latency 2292 
+8: OS LAT BUF HIT 
+8: Line access  8 latency 2494 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 0 ,latency 207 , addr 140492823563996 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 136 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 136 IP_NJUM 32 
+9: sample read  pid 0, tid 0,CPU 0 ,latency 181 , addr 18446612167096386696 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 0 ,latency 407 , addr 140492818779396 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 0 ,latency 223 , addr 140492937674836 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 0 ,latency 398 , addr 140492820449616 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 0 ,latency 243 , addr 140492821339888 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 0 ,latency 264 , addr 140492821723024 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 0 ,latency 281 , addr 140492822320416 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 0 ,latency 255 , addr 140492822983924 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 120 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 120 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 0 ,latency 531 , addr 18446719885966931336 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 136 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 136 IP_NJUM 32 
+9: sample read  pid 0, tid 0,CPU 0 ,latency 135 , addr 18446612201465810632 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 136 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 136 IP_NJUM 32 
+9: sample read  pid 0, tid 0,CPU 0 ,latency 159 , addr 18446612235828936800 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: FOR CPU 0 Record num are 9 
+9: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+9: LATENCY FROM LLREC_ADD 207 
+9: LATENCY FROM LLREC_ADD 207 
+9: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+9: LATENCY FROM LLREC_ADD 407 
+9: LATENCY FROM LLREC_ADD 407 
+9: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+9: LATENCY FROM LLREC_ADD 223 
+9: LATENCY FROM LLREC_ADD 223 
+9: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+9: LATENCY FROM LLREC_ADD 398 
+9: LATENCY FROM LLREC_ADD 398 
+9: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+9: LATENCY FROM LLREC_ADD 243 
+9: LATENCY FROM LLREC_ADD 243 
+9: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+9: LATENCY FROM LLREC_ADD 264 
+9: LATENCY FROM LLREC_ADD 264 
+9: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+9: LATENCY FROM LLREC_ADD 281 
+9: LATENCY FROM LLREC_ADD 281 
+9: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+9: LATENCY FROM LLREC_ADD 255 
+9: LATENCY FROM LLREC_ADD 255 
+9: Received task  PID 140316 TID:  140316 CPU  0 cpu2 0 
+9: LATENCY FROM LLREC_ADD 531 
+9: LATENCY FROM LLREC_ADD 531 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 112 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 112 IP_NJUM 32 
+9: sample read  pid 0, tid 0,CPU 1 ,latency 544 , addr 18446612270193850648 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 104 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 104 IP_NJUM 32 
+9: sample read  pid 140355, tid 140358,CPU 6 ,latency 724 , addr 18446612163709992515 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140355, tid 140358,CPU 6 ,latency 558 , addr 140641256206848 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: FOR CPU 6 Record num are 2 
+9: Received task  PID 140355 TID:  140358 CPU  6 cpu2 6 
+9: LATENCY FROM LLREC_ADD 724 
+9: LATENCY FROM LLREC_ADD 724 
+9: Received task  PID 140355 TID:  140358 CPU  6 cpu2 6 
+9: LATENCY FROM LLREC_ADD 558 
+9: LATENCY FROM LLREC_ADD 558 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 112 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 112 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 246 , addr 18446612151109472128 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 812 , addr 140728688138712 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 334 , addr 140492898689044 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 323 , addr 140493081304072 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 229 , addr 140493039621308 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 647 , addr 140493040830532 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 265 , addr 140492817674680 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 16 ,latency 277 , addr 140492826354004 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 16 ,latency 281 , addr 140493030418592 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 16 ,latency 204 , addr 140492827453176 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 16 ,latency 416 , addr 140492921107900 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 16 ,latency 245 , addr 140493086105744 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 16 ,latency 269 , addr 140493036377920 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 16 ,latency 290 , addr 79865444 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 16 ,latency 256 , addr 140492934477516 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 16 ,latency 218 , addr 140492907556876 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 96 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 96 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 309 , addr 18446612151315368464 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 88 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 88 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 452 , addr 18446612152060722832 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 240 , addr 39147768 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 72 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 72 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 135 , addr 18446719886067416560 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 88 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 88 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 516 , addr 18446612163184865136 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 96 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 96 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 632 , addr 18446612151240466528 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 562 , addr 140493015419768 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 112 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 112 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 792 , addr 18446612151953835888 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 292 , addr 78491676 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 322 , addr 140492822029020 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 155 , addr 140492823127128 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 174 , addr 78998584 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 177 , addr 140492822827032 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 265 , addr 78758728 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 201 , addr 140492823499236 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 16 ,latency 191 , addr 83316756 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: FOR CPU 16 Record num are 32 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 246 
+9: LATENCY FROM LLREC_ADD 246 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 812 
+9: LATENCY FROM LLREC_ADD 812 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 334 
+9: LATENCY FROM LLREC_ADD 334 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 323 
+9: LATENCY FROM LLREC_ADD 323 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 229 
+9: LATENCY FROM LLREC_ADD 229 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 647 
+9: LATENCY FROM LLREC_ADD 647 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 265 
+9: LATENCY FROM LLREC_ADD 265 
+9: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 277 
+9: LATENCY FROM LLREC_ADD 277 
+9: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 281 
+9: LATENCY FROM LLREC_ADD 281 
+9: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 204 
+9: LATENCY FROM LLREC_ADD 204 
+9: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 416 
+9: LATENCY FROM LLREC_ADD 416 
+9: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 245 
+9: LATENCY FROM LLREC_ADD 245 
+9: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 269 
+9: LATENCY FROM LLREC_ADD 269 
+9: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 290 
+9: LATENCY FROM LLREC_ADD 290 
+9: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 256 
+9: LATENCY FROM LLREC_ADD 256 
+9: Received task  PID 140316 TID:  140319 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 218 
+9: LATENCY FROM LLREC_ADD 218 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 309 
+9: LATENCY FROM LLREC_ADD 309 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 452 
+9: LATENCY FROM LLREC_ADD 452 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 240 
+9: LATENCY FROM LLREC_ADD 240 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 135 
+9: LATENCY FROM LLREC_ADD 135 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 516 
+9: LATENCY FROM LLREC_ADD 516 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 632 
+9: LATENCY FROM LLREC_ADD 632 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 562 
+9: LATENCY FROM LLREC_ADD 562 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 792 
+9: LATENCY FROM LLREC_ADD 792 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 292 
+9: LATENCY FROM LLREC_ADD 292 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 322 
+9: LATENCY FROM LLREC_ADD 322 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 155 
+9: LATENCY FROM LLREC_ADD 155 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 174 
+9: LATENCY FROM LLREC_ADD 174 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 177 
+9: LATENCY FROM LLREC_ADD 177 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 265 
+9: LATENCY FROM LLREC_ADD 265 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 201 
+9: LATENCY FROM LLREC_ADD 201 
+9: Received task  PID 140316 TID:  140316 CPU  16 cpu2 16 
+9: LATENCY FROM LLREC_ADD 191 
+9: LATENCY FROM LLREC_ADD 191 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 17 ,latency 164 , addr 140492832490828 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 17 ,latency 256 , addr 140492847373348 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 17 ,latency 302 , addr 84680728 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 17 ,latency 234 , addr 83804156 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 17 ,latency 129 , addr 79893460 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 17 ,latency 419 , addr 140492825039348 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 17 ,latency 222 , addr 79171884 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: FOR CPU 17 Record num are 7 
+9: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+9: LATENCY FROM LLREC_ADD 164 
+9: LATENCY FROM LLREC_ADD 164 
+9: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+9: LATENCY FROM LLREC_ADD 256 
+9: LATENCY FROM LLREC_ADD 256 
+9: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+9: LATENCY FROM LLREC_ADD 302 
+9: LATENCY FROM LLREC_ADD 302 
+9: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+9: LATENCY FROM LLREC_ADD 234 
+9: LATENCY FROM LLREC_ADD 234 
+9: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+9: LATENCY FROM LLREC_ADD 129 
+9: LATENCY FROM LLREC_ADD 129 
+9: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+9: LATENCY FROM LLREC_ADD 419 
+9: LATENCY FROM LLREC_ADD 419 
+9: Received task  PID 140316 TID:  140319 CPU  17 cpu2 17 
+9: LATENCY FROM LLREC_ADD 222 
+9: LATENCY FROM LLREC_ADD 222 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 24 ,latency 345 , addr 140493037138800 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 32 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 32 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 24 ,latency 443 , addr 140493037855000 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 24 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 24 IP_NJUM 32 
+9: sample read  pid 140316, tid 140319,CPU 24 ,latency 536 , addr 140492976878168 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 24 ,latency 382 , addr 140492820349640 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: ll_sample_read: Inside 
+9: pf_ll_SAMPLE READ. SIZE : 40 
+  9: pf_ll_start: pf_event_open is success. SIZE(NR) : 40 IP_NJUM 32 
+9: sample read  pid 140316, tid 140316,CPU 24 ,latency 373 , addr 140492818532036 
+9: ll recbuf update 
+9: Inside infinite for loop 
+9: FOR CPU 24 Record num are 5 
+9: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+9: LATENCY FROM LLREC_ADD 345 
+9: LATENCY FROM LLREC_ADD 345 
+9: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+9: LATENCY FROM LLREC_ADD 443 
+9: LATENCY FROM LLREC_ADD 443 
+9: Received task  PID 140316 TID:  140319 CPU  24 cpu2 24 
+9: LATENCY FROM LLREC_ADD 536 
+9: LATENCY FROM LLREC_ADD 536 
+9: Received task  PID 140316 TID:  140316 CPU  24 cpu2 24 
+9: LATENCY FROM LLREC_ADD 382 
+9: LATENCY FROM LLREC_ADD 382 
+9: Received task  PID 140316 TID:  140316 CPU  24 cpu2 24 
+9: LATENCY FROM LLREC_ADD 373 
+9: LATENCY FROM LLREC_ADD 373 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: pf_ll_RECORD 
+9: Inside infinite for loop 
+9: OS_LAT_WIN_DRAW CALLED ..... !!!!!!!!!! 
+9: WIN_LAT_DATA_SHOW CALLED ..... !!!!!!!!!! 140316
+9: LAT_DATA_GET CALLED ..... !!!!!!!!!! 140316
+9: For light weight process 140319 PID 140316
+9: WIN_LAT_BUFFER_FILL    Lines: 45 nrec_cur 19 
+9: OS LAT BUF HIT 
+9: Line access  0 latency 0 
+9: OS LAT BUF HIT 
+9: Line access  0 latency 0 
+9: OS LAT BUF HIT 
+9: Line access  1 latency 277 
+9: OS LAT BUF HIT 
+9: Line access  0 latency 0 
+9: OS LAT BUF HIT 
+9: Line access  1 latency 281 
+9: OS LAT BUF HIT 
+9: Line access  2 latency 526 
+9: OS LAT BUF HIT 
+9: Line access  0 latency 0 
+9: OS LAT BUF HIT 
+9: Line access  1 latency 416 
+9: OS LAT BUF HIT 
+9: Line access  2 latency 481 
+9: OS LAT BUF HIT 
+9: Line access  3 latency 699 
+9: OS LAT BUF HIT 
+9: Line access  4 latency 863 
+9: OS LAT BUF HIT 
+9: Line access  1 latency 290 
+9: OS LAT BUF HIT 
+9: Line access  2 latency 592 
+9: OS LAT BUF HIT 
+9: Line access  3 latency 826 
+9: OS LAT BUF HIT 
+9: Line access  5 latency 1119 
+9: OS LAT BUF HIT 
+9: Line access  4 latency 955 
+9: OS LAT BUF HIT 
+9: Line access  3 latency 795 
+9: OS LAT BUF HIT 
+9: Line access  4 latency 1140 
+9: OS LAT BUF HIT 
+9: Line access  5 latency 1583 
+10: disp thread received CMD_QUIT_ID
+10: Send PERF_QUIT_ID to perf thread
+10: perf_handler: received QUIT
+10: perf thread is exiting.
+10: perf thread exit yet
+10: disp thread is exiting
+10: disp thread exit yet
+10: Send PIPE_CHAR_QUIT to cons thread
+10: cons: received PIPE_CHAR_QUIT
+10: cons thread is exiting
+10: cons thread exit yet

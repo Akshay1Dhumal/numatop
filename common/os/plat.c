@@ -61,12 +61,15 @@ plat_profiling_config(perf_count_id_t perf_count_id, plat_event_config_t *cfg)
 void
 plat_ll_config(plat_event_config_t *cfg)
 {
+
 	pfn_plat_ll_config_t pfn =
 	    s_plat_ll_config[s_cpu_type];
 
 	if (pfn != NULL) {
+		printf("PLAT_LL_CONFIG \n");
 		pfn(cfg);
 	}
+
 }
 
 void
@@ -84,13 +87,17 @@ plat_config_get(perf_count_id_t perf_count_id, plat_event_config_t *cfg,
 /*
  * Platform-independent function to return the number of offcore counters.
  */
-int
-plat_offcore_num(void)
+int plat_offcore_num(void)
 {
+
+
+
 	pfn_plat_offcore_num_t pfn =
 	    s_plat_offcore_num[s_cpu_type];
 
-	if (pfn != NULL) {
+	if (pfn != NULL)
+	{
+		printf("PLAT_offcore_num");
 		return (pfn());
 	}
 	

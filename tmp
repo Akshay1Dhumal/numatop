@@ -1,0 +1,259 @@
+0: Execute 'mount -t resctrl resctrl /sys/fs/resctrl 2>/dev/null' ok
+0: 2 QPI/UPI links per node
+0: 8 memory controllers per node
+0: calibrate_cpuinfo: nsofclk = 0.4348, clkofsec = 2300000000
+0: Detected 32 online CPUs
+0: Enabled CQM/MBM: no
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x0, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301b7, attr.config1 = 0x67f800001
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x9, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x0, attr.config = 0x1, attr.config1 = 0x0
+0: pf_profiling_setup: attr.type = 0x4, attr.config = 0x5301bb, attr.config1 = 0x600400001
+0: os_profiling_start success
+1: profiling_sample_read: skip 48 bytes, ret=0
+1: profiling_sample_read: skip 144 bytes, ret=0
+2: pf_uncoreqpi_setup: pf_event_open is successful for node 1, qpi 0, cpu 8, type 15, config 0x600, fd 166
+2: pf_uncoreqpi_setup: pf_event_open is successful for node 1, qpi 1, cpu 8, type 16, config 0x600, fd 167
+2: pf_uncoreimc_setup: pf_event_open is successful for node 1, imc 0, cpu 8, type 12, config 0xff04, fd 168
+2: pf_uncoreimc_setup: pf_event_open is successful for node 1, imc 1, cpu 8, type 13, config 0xff04, fd 169
+2: pf_uncoreimc_setup: pf_event_open is successful for node 1, imc 2, cpu 8, type 10, config 0xff04, fd 170
+2: pf_uncoreimc_setup: pf_event_open is successful for node 1, imc 3, cpu 8, type 11, config 0xff04, fd 171
+2: pf_uncoreimc_setup: pf_event_open is successful for node 1, imc 4, cpu 8, type 19, config 0xff04, fd 172
+2: pf_uncoreimc_setup: pf_event_open is successful for node 1, imc 5, cpu 8, type 20, config 0xff04, fd 173
+2: pf_uncoreimc_setup: pf_event_open is successful for node 1, imc 6, cpu 8, type 17, config 0xff04, fd 174
+2: pf_uncoreimc_setup: pf_event_open is successful for node 1, imc 7, cpu 8, type 18, config 0xff04, fd 175
+2: pf_uncorqpi_start: for node 1, qpi 0, cpu 8, type 15, fd 166
+2: pf_uncorqpi_start: for node 1, qpi 1, cpu 8, type 16, fd 167
+2: pf_uncoreimc_start: for node 1, imc 0, cpu 8, type 12, fd 168
+2: pf_uncoreimc_start: for node 1, imc 1, cpu 8, type 13, fd 169
+2: pf_uncoreimc_start: for node 1, imc 2, cpu 8, type 10, fd 170
+2: pf_uncoreimc_start: for node 1, imc 3, cpu 8, type 11, fd 171
+2: pf_uncoreimc_start: for node 1, imc 4, cpu 8, type 19, fd 172
+2: pf_uncoreimc_start: for node 1, imc 5, cpu 8, type 20, fd 173
+2: pf_uncoreimc_start: for node 1, imc 6, cpu 8, type 17, fd 174
+2: pf_uncoreimc_start: for node 1, imc 7, cpu 8, type 18, fd 175
+2: bandwidth qpi :  0,  0.000000 0
+2: bandwidth qpi :  1,  0.000000 0
+4: Left is 24 
+4: pf_uncoreqpi_smpl: node 1, qpi 0, fd 166: 2717437274, 2270026347, 2270026347,Value scaled 2717437274
+4: Left is 24 
+4: pf_uncoreqpi_smpl: node 1, qpi 1, fd 167: 2717433638, 2270012657, 2270012657,Value scaled 2717433638
+4: Left is 24 
+4: pf_uncoreimc_smpl: node 1, imc 0, fd 168: 256123, 2270009743, 2270009743Value scaled 4283731
+4: Left is 24 
+4: pf_uncoreimc_smpl: node 1, imc 1, fd 169: 695022, 2270004638, 2270004638Value scaled 4283731
+4: Left is 24 
+4: pf_uncoreimc_smpl: node 1, imc 2, fd 170: 0, 2270002749, 2270002749Value scaled 4283731
+4: Left is 24 
+4: pf_uncoreimc_smpl: node 1, imc 3, fd 171: 0, 2269999157, 2269999157Value scaled 4283731
+4: Left is 24 
+4: pf_uncoreimc_smpl: node 1, imc 4, fd 172: 0, 2269997610, 2269997610Value scaled 4283731
+4: Left is 24 
+4: pf_uncoreimc_smpl: node 1, imc 5, fd 173: 0, 2269994884, 2269994884Value scaled 4283731
+4: Left is 24 
+4: pf_uncoreimc_smpl: node 1, imc 6, fd 174: 0, 2269992037, 2269992037Value scaled 4283731
+4: Left is 24 
+4: pf_uncoreimc_smpl: node 1, imc 7, fd 175: 0, 2270015854, 2270015854Value scaled 4283731
+4: bandwidth qpi :  0,  20732.401077 2717437274
+4: bandwidth qpi :  1,  20732.373337 2717433638
+5: profiling_sample_read: skip 760 bytes, ret=0
+5: profiling_sample_read: skip 760 bytes, ret=0
+5: profiling_sample_read: skip 80 bytes, ret=0
+6: Left is 24 
+6: pf_uncoreqpi_smpl: node 1, qpi 0, fd 166: 1671243296, 1393206662, 1393206662,Value scaled 1671243295
+6: Left is 24 
+6: pf_uncoreqpi_smpl: node 1, qpi 1, fd 167: 1671244016, 1393205884, 1393205884,Value scaled 1671244016
+6: Left is 24 
+6: pf_uncoreimc_smpl: node 1, imc 0, fd 168: 203108, 1393207170, 1393207170Value scaled 4283731
+6: Left is 24 
+6: pf_uncoreimc_smpl: node 1, imc 1, fd 169: 471550, 1393210014, 1393210014Value scaled 4283731
+6: Left is 24 
+6: pf_uncoreimc_smpl: node 1, imc 2, fd 170: 0, 1393211485, 1393211485Value scaled 4283731
+6: Left is 24 
+6: pf_uncoreimc_smpl: node 1, imc 3, fd 171: 0, 1393212891, 1393212891Value scaled 4283731
+6: Left is 24 
+6: pf_uncoreimc_smpl: node 1, imc 4, fd 172: 0, 1393213439, 1393213439Value scaled 4283731
+6: Left is 24 
+6: pf_uncoreimc_smpl: node 1, imc 5, fd 173: 0, 1393213162, 1393213162Value scaled 4283731
+6: Left is 24 
+6: pf_uncoreimc_smpl: node 1, imc 6, fd 174: 0, 1393213954, 1393213954Value scaled 4283731
+6: Left is 24 
+6: pf_uncoreimc_smpl: node 1, imc 7, fd 175: 0, 1393187339, 1393187339Value scaled 4283731
+6: bandwidth qpi :  0,  12750.574455 1671243295
+6: bandwidth qpi :  1,  12750.579956 1671244016
+6: disp thread received CMD_QUIT_ID
+6: Send PERF_QUIT_ID to perf thread
+6: perf_handler: received QUIT
+6: pf_uncoreqpi_free: nid 1, qpi 0, fd 166
+6: pf_uncoreqpi_free: nid 1, qpi 1, fd 167
+6: pf_uncoreimc_free: nid 1, imc 0, fd 168
+6: pf_uncoreimc_free: nid 1, imc 1, fd 169
+6: pf_uncoreimc_free: nid 1, imc 2, fd 170
+6: pf_uncoreimc_free: nid 1, imc 3, fd 171
+6: pf_uncoreimc_free: nid 1, imc 4, fd 172
+6: pf_uncoreimc_free: nid 1, imc 5, fd 173
+6: pf_uncoreimc_free: nid 1, imc 6, fd 174
+6: pf_uncoreimc_free: nid 1, imc 7, fd 175
+6: perf thread is exiting.
+6: perf thread exit yet
+6: disp thread is exiting
+6: disp thread exit yet
+6: Send PIPE_CHAR_QUIT to cons thread
+6: cons: received PIPE_CHAR_QUIT
+6: cons thread is exiting
+6: cons thread exit yet

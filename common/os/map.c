@@ -296,8 +296,7 @@ map_entry_find(track_proc_t *proc, uint64_t addr, uint64_t size)
 	return (NULL);
 }
 
-static numa_entry_t *
-numa_entry_add(numa_map_t *numa_map, uint64_t addr, int nid)
+static numa_entry_t * numa_entry_add(numa_map_t *numa_map, uint64_t addr, int nid)
 {
 	numa_entry_t *entry;
 
@@ -314,8 +313,7 @@ numa_entry_add(numa_map_t *numa_map, uint64_t addr, int nid)
 	return (entry);
 }
 
-static numa_entry_t *
-numa_map_update(numa_map_t *numa_map, void **addr_arr, int *node_arr,
+static numa_entry_t * numa_map_update(numa_map_t *numa_map, void **addr_arr, int *node_arr,
 	int addr_num, numa_entry_t *last_entry)
 {
 	numa_entry_t *entry;
@@ -345,8 +343,7 @@ numa_map_update(numa_map_t *numa_map, void **addr_arr, int *node_arr,
 	return (entry);
 }
 
-int
-map_map2numa(track_proc_t *proc, map_entry_t *map_entry)
+int map_map2numa(track_proc_t *proc, map_entry_t *map_entry)
 {
 	void *addr_arr[NUMA_MOVE_NPAGES];
 	unsigned int i, npages_total, npages_tomove, npages_moved = 0;
@@ -380,8 +377,7 @@ map_map2numa(track_proc_t *proc, map_entry_t *map_entry)
 	return (0);
 }
 
-int
-map_addr2nodedst(pid_t pid, void **addr_arr, int *lat_arr, int addr_num,
+int map_addr2nodedst(pid_t pid, void **addr_arr, int *lat_arr, int addr_num,
 	map_nodedst_t *nodedst_arr, int nnodes, int *naccess_total)
 {
 	int *status_arr, i, nid;
@@ -389,8 +385,14 @@ map_addr2nodedst(pid_t pid, void **addr_arr, int *lat_arr, int addr_num,
 	if ((status_arr = zalloc(sizeof (int) * addr_num)) == NULL) {
 		return (-1);
 	}
+	/*
+	 * long move_pages(int pid, unsigned long count, void **pages,
+    const int *nodes, int *status, int flags);
+    nodes can also be NULL, in which case move_pages()
+    does not move any pages but instead will return the node where each page currently resides, in the status array.
+	 */
 
-	if (numa_move_pages(pid, addr_num, addr_arr, NULL, status_arr, 0) != 0) {
+	if (numa_move_pages(pid, addr_num, addr_arr, NULL, status_arr, 0) != 0) { //since nodes is null, status array contain node id of each page
 		free(status_arr);
 		return (-1);
 	}
@@ -398,6 +400,7 @@ map_addr2nodedst(pid_t pid, void **addr_arr, int *lat_arr, int addr_num,
 	*naccess_total = 0;
 	for (i = 0; i < addr_num; i++) {
 		nid = status_arr[i];
+		debug_print(NULL, 2, "NID obtained is %d\n",nid);
 		if ((nid >= 0) && (nid < nnodes)) {
 			nodedst_arr[nid].naccess++;
 			nodedst_arr[nid].total_lat += lat_arr[i];

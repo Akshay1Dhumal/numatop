@@ -520,6 +520,7 @@ node_qpi_init(void)
 	node_t *node;
 
 	qpi_num = os_sysfs_uncore_qpi_init(qpi_tmp, NODE_QPI_MAX);
+	printf("qpi num=%d\n",qpi_num);
 	if (qpi_num < 0)
 		return -1;
 

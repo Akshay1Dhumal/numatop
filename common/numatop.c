@@ -62,6 +62,8 @@ static void print_usage(const char *exec_name);
 int
 main(int argc, char *argv[])
 {
+
+
 	int ret = 1, debug_level = 0;
 	FILE *log = NULL, *dump = NULL;
 	boolean_t locked = B_FALSE;

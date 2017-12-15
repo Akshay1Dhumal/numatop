@@ -208,8 +208,7 @@ perf_status_wait(perf_status_t status)
  * The thread handler of 'perf thread'.
  */
 /* ARGSUSED */
-static void *
-perf_handler(void *arg)
+static void * perf_handler(void *arg)
 {
 	perf_task_t task;
 	int intval_ms;
@@ -318,8 +317,7 @@ L_EXIT:
 /*
  * Initialization for perf control structure.
  */
-int
-perf_init(void)
+int perf_init(void)
 {
 	boolean_t mutex_inited = B_FALSE;
 	boolean_t cond_inited = B_FALSE;
@@ -355,7 +353,6 @@ perf_init(void)
 	if (pthread_create(&s_perf_ctl.thr, NULL, perf_handler, NULL) != 0) {
 		goto L_EXIT;
 	}
-
 	s_perf_ctl.last_ms = current_ms(&g_tvbase);
 	if (perf_profiling_start() != 0) {
 		debug_print(NULL, 2, "perf_init: "
@@ -552,8 +549,7 @@ perf_ll_started(void)
 	return (B_FALSE);
 }
 
-int
-perf_ll_start(pid_t pid)
+int perf_ll_start(pid_t pid)
 {
 	perf_task_t task;
 	task_ll_t *t;
