@@ -39,6 +39,7 @@
 #include <sys/errno.h>
 #include "../include/types.h"
 #include "../include/perf.h"
+#include "../include/proc.h"
 #include "../include/util.h"
 #include "../include/os/pfwrapper.h"
 #include "../include/os/node.h"
@@ -421,7 +422,7 @@ int pf_ll_setup(struct _perf_cpu *cpu, pf_conf_t *conf)
 	attr.config = conf->config;
 	attr.config1 = conf->config1;
 	attr.sample_period = conf->sample_period;
-	attr.precise_ip = 1;
+	attr.precise_ip = 1; //pebs event : precise event based sampling
 	attr.exclude_guest = 1;
 	attr.sample_type = PERF_SAMPLE_TID | PERF_SAMPLE_ADDR | PERF_SAMPLE_CPU |
 		PERF_SAMPLE_WEIGHT | PERF_SAMPLE_CALLCHAIN;
@@ -440,8 +441,7 @@ int pf_ll_setup(struct _perf_cpu *cpu, pf_conf_t *conf)
 		fds[0] = INVALID_FD;
 		return (-1);
 	}
-	debug_print(NULL, 2, "pf_ll_setup \n"
-					"for CPU%d\n", cpu->cpuid);
+//	debug_print(NULL, 2, "pf_ll_setup \nfor CPU%d\n", cpu->cpuid);
 	cpu->map_len = s_mapsize;
 	cpu->map_mask = s_mapmask;
 	return (0);
@@ -466,7 +466,23 @@ pf_ll_stop(struct _perf_cpu *cpu)
 	
 	return (0);
 }
+fetch_process_name(int pid)
+{
+	char pid_s[7];
+	sprintf(pid_s,"%d",pid);
+	char command[50];
+	char str[50];
+	strcpy(command,"ps -e | grep ");
+	strcat(command,pid_s);
 
+	assert(command!=NULL);
+	FILE *fpipe;
+	fpipe = (FILE*)popen(command,"r");
+	assert(fpipe!=NULL);
+	fgets(str,sizeof(char)*50,fpipe);
+	printf("%s",str);
+
+}
 static int ll_sample_read(struct perf_event_mmap_page *mhdr, int size,pf_ll_rec_t *rec)
 {
 	struct
@@ -474,7 +490,7 @@ static int ll_sample_read(struct perf_event_mmap_page *mhdr, int size,pf_ll_rec_
 	} id;
 	uint64_t i, addr, cpu, weight, nr, value, *ips;
 	int j, ret = -1;
-	debug_print(NULL, 2, "ll_sample_read: Inside \n");
+
 	/*
 	 * struct read_format {
 	 *	{ u32	pid, tid; }
@@ -489,7 +505,6 @@ static int ll_sample_read(struct perf_event_mmap_page *mhdr, int size,pf_ll_rec_
 		debug_print(NULL, 2, "ll_sample_read: read pid/tid failed.\n");
 		goto L_EXIT;
 	}
-
 	size -= sizeof (id);
 
 	if (mmap_buffer_read(mhdr, &addr, sizeof (addr)) == -1) {
@@ -512,10 +527,10 @@ static int ll_sample_read(struct perf_event_mmap_page *mhdr, int size,pf_ll_rec_
 	}
 
 	size -= sizeof (nr);
-	debug_print(NULL, 2, "pf_ll_SAMPLE READ. SIZE : %d \n  ",size);
+	//debug_print(NULL, 2, "pf_ll_SAMPLE READ. SIZE : %d \n  ",size);
 	j = 0;
 	ips = rec->ips;
-	debug_print(NULL, 2, "pf_ll_start: pf_event_open is success. SIZE(NR) : %d IP_NJUM %d \n",size,IP_NUM);
+	//debug_print(NULL, 2, "pf_ll_start: pf_event_open is success. SIZE(NR) : %d IP_NJUM %d \n",size,IP_NUM);
 	for (i = 0; i < nr; i++) {
 		if (j >= IP_NUM) {
 			break;
@@ -537,6 +552,7 @@ static int ll_sample_read(struct perf_event_mmap_page *mhdr, int size,pf_ll_rec_
 		}
 	}
 
+
 	if (mmap_buffer_read(mhdr, &weight, sizeof (weight)) == -1) {
 		debug_print(NULL, 2, "ll_sample_read: read weight failed.\n");
 		goto L_EXIT;
@@ -551,22 +567,26 @@ static int ll_sample_read(struct perf_event_mmap_page *mhdr, int size,pf_ll_rec_
 	rec->cpu = cpu;
 	rec->latency = weight;	
 	ret = 0;
-	debug_print(NULL, 2, "sample read  pid %d, tid %d,CPU %"PRIu64" ,latency %"PRIu64" , addr %"PRIu64" \n",rec->pid,rec->tid,rec->cpu,rec->latency,rec->addr);
+	track_proc_t *proc = proc_find(rec->pid);
+	if(proc!=NULL)
+	{
 
+
+	debug_print(NULL, 2, "sample read  pid %d tid %d %s CPU %"PRIu64" latency %"PRIu64" addr %"PRIu64"\n",rec->pid,rec->tid,proc->name,rec->cpu,rec->latency,rec->addr);
+	}
 L_EXIT:
 	if (size > 0) {
 		mmap_buffer_skip(mhdr, size);
 		debug_print(NULL, 2, "ll_sample_read: skip %d bytes, ret=%d\n",
 			size, ret);
 	}
-
 	return (ret);
 }
 
 static void ll_recbuf_update(pf_ll_rec_t *rec_arr, int *nrec, pf_ll_rec_t *rec)
 {
 	int i;
-	debug_print(NULL, 2, "ll recbuf update \n");
+//	debug_print(NULL, 2, "ll recbuf update \n");
 	if ((rec->pid == 0) || (rec->tid == 0)) {
 		/* Just consider the user-land process/thread. */
 		return;	
@@ -591,9 +611,9 @@ void pf_ll_record(struct _perf_cpu *cpu, pf_ll_rec_t *rec_arr, int *nrec) //rec_
 		debug_print(NULL, 2, "Record array is NULL  \n");
 	    }
 	*nrec = 0;
-	debug_print(NULL, 2, "pf_ll_RECORD \n");
+
 	for (;;) { //infinite loop
-		debug_print(NULL, 2, "Inside infinite for loop \n");
+
 		if (mmap_buffer_read(mhdr, &ehdr, sizeof(ehdr)) == -1) {
 			/* No valid record in ring buffer. */
 			return;

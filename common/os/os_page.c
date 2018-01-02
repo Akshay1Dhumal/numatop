@@ -43,8 +43,7 @@
 /*
  * Start sampling the performance data.
  */
-boolean_t
-os_page_smpl_start(page_t *page)
+boolean_t os_page_smpl_start(page_t *page)
 {
 	cmd_t *cmd = PAGE_CMD(page);
 	win_type_t type = PAGE_WIN_TYPE(page);

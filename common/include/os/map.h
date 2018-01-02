@@ -101,7 +101,10 @@ typedef struct _map_proc {
 
 typedef struct _map_nodedst {
 	int naccess;
-	unsigned int total_lat;
+	int local_node;
+	float access_ratio;
+	float avg_latency;
+	int total_lat;
 } map_nodedst_t;
 
 #define NUMA_MOVE_NPAGES	1024

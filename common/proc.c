@@ -41,6 +41,7 @@
 #include "include/types.h"
 #include "include/lwp.h"
 #include "include/proc.h"
+#include "include/win.h"
 #include "include/disp.h"
 #include "include/util.h"
 #include "include/perf.h"
@@ -52,8 +53,7 @@ static proc_group_t s_proc_group;
 /*
  * Initialization for the process group.
  */
-int
-proc_group_init(void)
+int proc_group_init(void)
 {
 	(void) memset(&s_proc_group, 0, sizeof (s_proc_group));
 	if (pthread_mutex_init(&s_proc_group.mutex, NULL) != 0) {
@@ -120,12 +120,94 @@ proc_free(track_proc_t *proc)
 	(void) pthread_mutex_destroy(&proc->mutex);
 	free(proc);
 }
+void proc_traverse1(FILE *fp) //akshay
+{
 
+	track_proc_t *proc, *hash_next;char *w="streamcluster";
+	map_nodedst_t  * line;
+	map_nodedst_t  accdst[4];
+	int lat_counter[4][4];
+	map_nodedst_t nodedst[4][4];
+	if(fp==NULL)
+	{
+
+		printf("ERROR in opening FILE \n");
+	}
+	assert(fp!=NULL);
+
+	memset(nodedst, 0, sizeof (map_nodedst_t) * 16);
+	//making a square matrix representing the node to node interaction
+
+	int i,local, j = 0,k,m;
+	for (i = 0; i < PROC_HASHTBL_SIZE; i++) {
+
+		proc = s_proc_group.hashtbl[i];
+		while (proc != NULL) {
+			j++;
+			hash_next = proc->hash_next; //use the proc here
+			//for each lwp of process
+			track_lwp_t *lwp=NULL;
+			proc_lwplist_t *list = &proc->lwp_list;
+			boolean_t end;
+
+			if (list->id_arr == NULL) {
+				return;
+			}
+
+			for (k = 0; k < list->nlwps; k++)
+			{			//each lwp of process p
+				if ((lwp = list->id_arr[k]) != NULL)
+				{
+					line=malloc(sizeof(map_nodedst_t)*4);
+					memset(line, 0, sizeof (map_nodedst_t) * 4);
+					memset(accdst, 0, sizeof (map_nodedst_t) * 4);
+					accdst_data_compute(proc,lwp, line);
+
+					memcpy(&accdst,line,sizeof(map_nodedst_t)*4);
+					if(strcmp(proc->name,w)==0)
+					{
+						debug_print(NULL, 2, "PID %d %d %s #acc: %d %d %d %d latency %f localnode %d\n",
+								proc->pid,lwp->id,proc->name,accdst[0].naccess,accdst[1].naccess,accdst[2].naccess,accdst[3].naccess,
+								accdst[0].avg_latency,accdst[0].local_node);
+					}
+
+					//hueristic: that max no of times is the local node
+					local=accdst[0].local_node;
+					for(m=0;m<4;m++) //for each node
+					{
+						lat_counter[local][m]+=1;
+						nodedst[local][m].naccess+=accdst[m].naccess;
+						nodedst[local][m].avg_latency+=accdst[m].avg_latency;
+					}
+					line=NULL;
+				}
+			}
+
+			proc = hash_next;
+		}
+
+		if (j == s_proc_group.nprocs) {
+			break;
+		}
+	}
+	debug_print(NULL,2,"LOOP \n");
+
+	//printing the matrix
+	for(i=0;i<4;i++){
+		for(m=0;m<4;m++) //for each node
+		{
+			fprintf(fp,"%d ",nodedst[i][m].naccess);
+			debug_print(NULL,2,"NODE %d to %d : %d \n",i,m,nodedst[i][m].naccess);
+			//nodedst[local][m].avg_latency+=accdst[m].avg_latency;
+		}fprintf(fp,"\n");
+	}
+	fprintf(fp,"\n");
+	//fclose(fp);
+}
 /*
  * Walk through all processes and call 'func()' for each processes.
  */
-static void
-proc_traverse(int (*func)(track_proc_t *, void *, boolean_t *), void *arg)
+static void proc_traverse(int (*func)(track_proc_t *, void *, boolean_t *), void *arg)
 {
 	track_proc_t *proc, *hash_next;
 	boolean_t end;
@@ -154,8 +236,7 @@ proc_traverse(int (*func)(track_proc_t *, void *, boolean_t *), void *arg)
 }
 
 /* ARGSUSED */
-static int
-proc_free_walk(track_proc_t *proc, void *arg, boolean_t *end)
+static int proc_free_walk(track_proc_t *proc, void *arg, boolean_t *end)
 {
 	*end = B_FALSE;
 	proc_free(proc);
@@ -186,8 +267,7 @@ proc_group_fini(void)
 /*
  * Look for a process by specified pid.
  */
-static track_proc_t *
-proc_find_nolock(pid_t pid)
+static track_proc_t * proc_find_nolock(pid_t pid)
 {
 	track_proc_t *proc;
 	int hashidx;
@@ -196,7 +276,7 @@ proc_find_nolock(pid_t pid)
 	 * To speed up, check the "latest access" process first.
 	 */
 	if ((s_proc_group.latest != NULL) &&
-	    ((s_proc_group.latest)->pid == pid)) {
+			((s_proc_group.latest)->pid == pid)) {
 		proc = s_proc_group.latest;
 		goto L_EXIT;
 	}
@@ -214,7 +294,7 @@ proc_find_nolock(pid_t pid)
 		proc = proc->hash_next;
 	}
 
-L_EXIT:
+	L_EXIT:
 	if (proc != NULL) {
 		if (proc_refcount_inc(proc) != 0) {
 			/*
@@ -238,8 +318,7 @@ L_EXIT:
 /*
  * Look for a process by pid with lock protection.
  */
-track_proc_t *
-proc_find(pid_t pid)
+track_proc_t * proc_find(pid_t pid)
 {
 	track_proc_t *proc;
 
@@ -252,8 +331,7 @@ proc_find(pid_t pid)
 /*
  * Allocation and initialization for a new 'track_proc_t' structure.
  */
-static track_proc_t *
-proc_alloc(void)
+static track_proc_t * proc_alloc(void)
 {
 	int cpuid_max;
 	track_proc_t *proc;
@@ -264,7 +342,7 @@ proc_alloc(void)
 	}
 
 	if ((countval_arr = zalloc(cpuid_max *
-	    sizeof (count_value_t))) == NULL) {
+			sizeof (count_value_t))) == NULL) {
 		return (NULL);
 	}
 
@@ -316,8 +394,8 @@ proc_lwp_find(track_proc_t *proc, id_t lwpid)
 	lwp_key.id = lwpid;
 	(void) pthread_mutex_lock(&proc->mutex);
 	if ((p = bsearch(&lwp_key, (void *)(list->id_arr),
-	    list->nlwps, sizeof (track_lwp_t *),
-	    lwp_id_cmp)) != NULL) {
+			list->nlwps, sizeof (track_lwp_t *),
+			lwp_id_cmp)) != NULL) {
 
 		lwp = *p;
 		if (lwp_refcount_inc(lwp) != 0) {
@@ -366,7 +444,7 @@ proc_lwp_sortkey(track_proc_t *proc)
 	}
 
 	(void) memcpy(sort_arr, list->id_arr,
-	    sizeof (track_lwp_t *) * list->nlwps);
+			sizeof (track_lwp_t *) * list->nlwps);
 	qsort(sort_arr, list->nlwps, sizeof (track_lwp_t *), lwp_key_cmp);
 	list->sort_arr = sort_arr;
 	list->sort_idx = 0;
@@ -416,7 +494,7 @@ static uint64_t
 count_value_get(track_proc_t *proc, ui_count_id_t ui_count_id)
 {
 	return (node_countval_sum(proc->countval_arr, proc->cpuid_max,
-	    NODE_ALL, ui_count_id));
+			NODE_ALL, ui_count_id));
 }
 
 /*
@@ -541,10 +619,10 @@ proc_sortkey(void)
 	}
 
 	qsort(sort_arr, s_proc_group.nprocs,
-	    sizeof (track_proc_t *), proc_pid_cmp);
+			sizeof (track_proc_t *), proc_pid_cmp);
 
 	qsort(sort_arr, s_proc_group.nprocs,
-	    sizeof (track_proc_t *), proc_key_cmp);
+			sizeof (track_proc_t *), proc_key_cmp);
 
 	s_proc_group.sort_arr = sort_arr;
 	s_proc_group.sort_idx = 0;
@@ -714,9 +792,9 @@ proc_nlwps_sum(track_proc_t *proc, void *arg, boolean_t *end)
  * figure out the obsolete processes and remove them. For the new processes,
  * add them in hashtbl.
  */
-static void
-proc_group_refresh(pid_t *procs_new, int nproc_new)
+static void proc_group_refresh(pid_t *procs_new, int nproc_new)
 {
+
 	track_proc_t *proc, *hash_next;
 	pid_t *p;
 	int i, j;
@@ -734,12 +812,12 @@ proc_group_refresh(pid_t *procs_new, int nproc_new)
 		while (proc != NULL) {
 			hash_next = proc->hash_next;
 			if ((p = pid_find(proc->pid, procs_new,
-			    nproc_new)) == NULL) {
+					nproc_new)) == NULL) {
 				proc_group_remove(proc);
 				proc_free(proc);
 			} else {
 				j = ((uint64_t)p - (uint64_t)procs_new) /
-				    sizeof (pid_t);
+						sizeof (pid_t);
 				exist_arr[j] = B_TRUE;
 			}
 
@@ -752,7 +830,7 @@ proc_group_refresh(pid_t *procs_new, int nproc_new)
 			if ((proc = proc_alloc()) != NULL) {
 				proc->pid = procs_new[i];
 				(void) os_procfs_pname_get(proc->pid,
-				    proc->name, PROC_NAME_SIZE);
+						proc->name, PROC_NAME_SIZE);
 				(void) proc_group_add(proc);
 			}
 		}
@@ -771,6 +849,7 @@ proc_group_refresh(pid_t *procs_new, int nproc_new)
  */
 void proc_enum_update(pid_t pid)
 {
+	debug_print(NULL,2,"Proc enum update \n");
 	pid_t *procs_new;
 	int nproc_new;
 
@@ -780,8 +859,10 @@ void proc_enum_update(pid_t pid)
 			proc_obsolete(pid);
 		}
 	} else {
+
 		if (procfs_proc_enum(&procs_new, &nproc_new) == 0) {
 			proc_group_refresh(procs_new, nproc_new);
+
 			free(procs_new);
 		}
 	}
@@ -832,9 +913,7 @@ proc_refcount_dec(track_proc_t *proc)
  * Walk through all the threads in process and call 'func()'
  * for each thread.
  */
-void
-proc_lwp_traverse(track_proc_t *proc,
-	int (*func)(track_lwp_t *, void *, boolean_t *), void *arg)
+void proc_lwp_traverse(track_proc_t *proc, int (*func)(track_lwp_t *, void *, boolean_t *), void *arg)
 {
 	track_lwp_t *lwp;
 	proc_lwplist_t *list = &proc->lwp_list;
@@ -863,7 +942,7 @@ proc_lwp_traverse(track_proc_t *proc,
  */
 int
 proc_countval_update(track_proc_t *proc, int cpu, perf_count_id_t perf_count_id,
-    uint64_t value)
+		uint64_t value)
 {
 	count_value_t *countval, *arr_new;
 	int cpuid_max = node_cpuid_max();
@@ -874,12 +953,12 @@ proc_countval_update(track_proc_t *proc, int cpu, perf_count_id_t perf_count_id,
 	if (cpu >= proc->cpuid_max) {
 		ASSERT(cpuid_max > proc->cpuid_max);
 		if ((arr_new = realloc(proc->countval_arr,
-		    sizeof (count_value_t) * cpuid_max)) == NULL) {
+				sizeof (count_value_t) * cpuid_max)) == NULL) {
 			return (-1);
 		}
 
 		(void) memset(&arr_new[proc->cpuid_max], 0,
-		    sizeof (count_value_t) * (cpuid_max - proc->cpuid_max));
+				sizeof (count_value_t) * (cpuid_max - proc->cpuid_max));
 
 		proc->countval_arr = arr_new;
 		proc->cpuid_max = cpuid_max;
@@ -924,7 +1003,7 @@ lwp_profiling_clear(track_lwp_t *lwp, void *arg, boolean_t *end)
 {
 	*end = B_FALSE;
 	(void) memset(lwp->countval_arr, 0,
-	    sizeof (count_value_t) * lwp->cpuid_max);
+			sizeof (count_value_t) * lwp->cpuid_max);
 	return (0);
 }
 
@@ -935,7 +1014,7 @@ profiling_clear(track_proc_t *proc, void *arg, boolean_t *end)
 	*end = B_FALSE;
 	proc_lwp_traverse(proc, lwp_profiling_clear, NULL);
 	(void) memset(proc->countval_arr, 0,
-	    sizeof (count_value_t) * proc->cpuid_max);
+			sizeof (count_value_t) * proc->cpuid_max);
 	return (0);
 }
 
@@ -982,10 +1061,10 @@ lwp_ll_clear(track_lwp_t *lwp, void *arg, boolean_t *end)
 static int
 ll_clear(track_proc_t *proc, void *arg, boolean_t *end)
 {
-        *end = B_FALSE;
-        proc_lwp_traverse(proc, lwp_ll_clear, NULL);
-        perf_llrecgrp_reset(&proc->llrec_grp);
-        return (0);
+	*end = B_FALSE;
+	proc_lwp_traverse(proc, lwp_ll_clear, NULL);
+	perf_llrecgrp_reset(&proc->llrec_grp);
+	return (0);
 }
 
 void
@@ -997,10 +1076,11 @@ proc_ll_clear(track_proc_t *proc)
 	} else {
 		proc_traverse(ll_clear, NULL);
 	}
+	debug_print(NULL ,2,"Proc ll clear \n");
 }
 
 void proc_pqos_func(track_proc_t *proc,
-	int (*func)(track_proc_t *, void *, boolean_t *))
+		int (*func)(track_proc_t *, void *, boolean_t *))
 {
 	if (proc == NULL) {
 		pthread_mutex_lock(&s_proc_group.mutex);

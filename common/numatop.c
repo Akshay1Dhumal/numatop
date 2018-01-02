@@ -231,7 +231,7 @@ main(int argc, char *argv[])
 		    NNODES_MAX, NCPUS_MAX);
 		goto L_EXIT5;
 	}
-
+	debug_print(NULL, 2, "NUMBER OF NODES %d CPU %d\n", NNODES_MAX, NCPUS_MAX);
 	node_qpi_init();
 	node_imc_init();
 
@@ -241,18 +241,13 @@ main(int argc, char *argv[])
 	os_calibrate(&g_nsofclk, &g_clkofsec);
 
 	debug_print(NULL, 2, "Detected %d online CPUs\n", g_ncpus);
-	debug_print(NULL, 2, "Enabled CQM/MBM: %s\n",
-		(g_cmt_enabled) ? "yes" : "no");
-
-	stderr_print("NumaTOP is starting ...\n");
+	debug_print(NULL, 2, "Enabled CQM/MBM: %s\n",(g_cmt_enabled) ? "yes" : "no");
+	debug_print(NULL, 2, "Address profiling started \n");
 
 	if (disp_cons_ctl_init() != 0) {
 		goto L_EXIT6;
 	}
 
-	/*
-	 * Catch signals from terminal.
-	 */
 	if ((signal(SIGINT, sigint_handler) == SIG_ERR) ||
 	    (signal(SIGHUP, sigint_handler) == SIG_ERR) ||
 	    (signal(SIGQUIT, sigint_handler) == SIG_ERR) ||
@@ -261,13 +256,18 @@ main(int argc, char *argv[])
 		goto L_EXIT7;
 	}
 
-	/*
-	 * Initialize the perf sampling facility.
-	 */
-	if (perf_init() != 0) {
-		debug_print(NULL, 2, "perf_init() is failed\n");
-		goto L_EXIT7;
+	if (os_perf_init() != 0) { //setup thne perf for  all settings
+		return (-1);
 	}
+	//perf_ll_start(0); //without threading ...start all perf ll
+
+	if (perf_init() != 0) //LAUNCHER THE PERF HANDLER THREAD
+	{
+					debug_print(NULL, 2, "perf_start() is failed\n");
+					goto L_EXIT7;
+	}
+
+
 
 	/*
 	 * Initialize for display and create console thread & display thread.
@@ -282,14 +282,17 @@ main(int argc, char *argv[])
 	 * exit when user hits the hotkey 'Q' or press "CTRL+C".
 	 */
 	disp_dispthr_quit_wait();
+	//goto L_EXIT6;
+	//disp_consthr_quit_wait();
+
 
 	/*
 	 * Notify cons thread to exit.
 	 */
-	disp_consthr_quit();
 
-	disp_fini();
-	stderr_print("NumaTOP is exiting ...\n");
+
+	//disp_fini();
+
 	(void) fflush(stdout);
 	ret = 0;
 
@@ -333,9 +336,9 @@ L_EXIT0:
 /*
  * The signal handler.
  */
-static void
-sigint_handler(int sig)
+static void sigint_handler(int sig)
 {
+
 	switch (sig) {
 	case SIGINT:
 		(void) signal(SIGINT, sigint_handler);

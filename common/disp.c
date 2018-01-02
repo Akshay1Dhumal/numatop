@@ -116,15 +116,14 @@ disp_ctl_fini(void)
  * Initialization for the display control structure and
  * creating 'disp thread'.
  */
-int
-disp_init(void)
+int disp_init(void)
 {
-	if (disp_ctl_init() != 0) {
+	/*if (disp_ctl_init() != 0) {
 		return (-1);
-	}
+	}*/
 
 	if (disp_start() != 0) {
-		disp_ctl_fini();
+		//disp_ctl_fini();
 		return (-1);
 	}
 
@@ -173,8 +172,7 @@ disp_cons_ctl_fini(void)
  * Send a character '<PIPE_CHAR_QUIT>' to pipe to notify the
  * 'cons thread' to quit.
  */
-void
-disp_consthr_quit(void)
+void disp_consthr_quit(void)
 {
 	char c;
 
@@ -306,19 +304,18 @@ disp_intval(char *buf, int size)
 /*
  * Create 'disp thread' and 'cons thread'.
  */
-static int
-disp_start(void)
+static int disp_start(void)
 {
-	if (pthread_create(&s_cons_ctl.thr, NULL, cons_handler, NULL) != 0) {
+	if (pthread_create(&s_cons_ctl.thr, NULL, cons_handler, NULL) != 0) { //cons thread : responsible for console inputs
 		debug_print(NULL, 2, "Create cons thread failed.\n");
 		return (-1);
 	}
 
-	if (pthread_create(&s_disp_ctl.thr, NULL, disp_handler, NULL) != 0) {
+	/*if (pthread_create(&s_disp_ctl.thr, NULL, disp_handler, NULL) != 0) {
 		debug_print(NULL, 2, "Create disp thread failed.\n");
 		disp_consthr_quit();
 		return (-1);
-	}
+	}*/
 
 	return (0);
 }
@@ -415,8 +412,7 @@ scroll_enter(void)
 	}
 }
 
-static boolean_t
-consthr_init_wait(void)
+static boolean_t consthr_init_wait(void)
 {
 	struct timespec timeout;
 	disp_flag_t flag;
@@ -454,8 +450,7 @@ consthr_init_wait(void)
  * The handler of 'disp thread'.
  */
 /* ARGSUSED */
-static void *
-disp_handler(void *arg)
+static void * disp_handler(void *arg)
 {
 	disp_flag_t flag;
 	int status = 0;
@@ -534,15 +529,13 @@ disp_handler(void *arg)
 
 		switch (flag) {
 		case DISP_FLAG_QUIT:
-			debug_print(NULL, 2,
-			    "disp: received DISP_FLAG_QUIT\n");
+			debug_print(NULL, 2,"disp: received DISP_FLAG_QUIT\n");
 			goto L_EXIT;
 
 		case DISP_FLAG_CMD:
 			cmd_received(&cmd, &quit, &timeout);
 			if (quit) {
-				debug_print(NULL, 2,
-				    "disp thread received CMD_QUIT_ID\n");
+				debug_print(NULL, 2,"disp thread received CMD_QUIT_ID\n");
 				goto L_EXIT;
 			}
 			break;
@@ -624,33 +617,33 @@ L_EXIT:
  * The handler of 'cons thread'
  */
 /* ARGSUSED */
-static void *
-cons_handler(void *arg)
+static void * cons_handler(void *arg)
 {
 	int c, cmd_id;
 	unsigned char ch;
 
-	if (!reg_curses_init(B_TRUE)) {
+	/*if (!reg_curses_init(B_TRUE)) {
 		goto L_EXIT;
 	}
 
-	win_fix_init();
+	//win_fix_init();
 
-	/*
+	/*make
+	 *
 	 * Excute "home" command. It shows the NumaTop default page.
 	 */
-	disp_go_home();
+	//disp_go_home();
 
 	for (;;) {
 		FD_ZERO(&s_cons_ctl.fds);
 		FD_SET(STDIN_FILENO, &s_cons_ctl.fds);
 		FD_SET(s_cons_ctl.pipe[0], &s_cons_ctl.fds);
+		debug_print(NULL, 2, "Inside FOR CONS........\n");
 
 		/*
 		 * Wait one character from "stdin" or pipe.
 		 */
-		if (select(s_cons_ctl.pipe[0] + 1, &s_cons_ctl.fds,
-		    NULL, NULL, NULL) > 0) {
+		if (select(s_cons_ctl.pipe[0] + 1, &s_cons_ctl.fds,NULL, NULL, NULL) > 0) {
 			if (FD_ISSET(s_cons_ctl.pipe[0], &s_cons_ctl.fds)) {
 				if (read(s_cons_ctl.pipe[0], &ch, 1) == 1) {
 					/*
@@ -661,84 +654,64 @@ cons_handler(void *arg)
 						 * Received a QUIT notification,
 						 * "console thread" will be quit
 						 */
-						debug_print(NULL, 2, "cons: "
-						    "received PIPE_CHAR_QUIT\n");
+						debug_print(NULL, 2, "cons: received PIPE_CHAR_QUIT\n");
 						break;
 					}
 
-					if (ch == PIPE_CHAR_RESIZE) {
-						/*
-						 * Send the "RESIZE" command
-						 * to "display thread".
-						 */
-						(void) pthread_mutex_lock(
-						    &s_disp_ctl.mutex);
 
-						CMD_ID_SET(&s_disp_ctl.cmd,
-						    CMD_RESIZE_ID);
-					dispthr_flagset_nolock(DISP_FLAG_CMD);
-
-					(void) pthread_mutex_unlock(
-					    &s_disp_ctl.mutex);
-					}
-				}
-			} else {
-				/*
-				 * Character is from STDIN.
-				 */
-				if ((c = getch()) == ERR) {
-					/*
-					 * It's possile if the associated
-					 * terminal is lost.
-					 */
-					debug_print(NULL, 2, "cons: "
-					    "getch() failed.\n");
-					break;
-				}
-
-				ch = tolower((unsigned char)c);
-				dump_write("\n<-- User hit the key '%c' "
-				    "(ascii = %d) -->\n", ch, (int)ch);
-
-				cmd_id = cmd_id_get(ch);
-				if (cmd_id != CMD_INVALID_ID) {
-					/*
-					 * The character is a command. Send
-					 * the command to 'disp thread'.
-					 */
-					(void) pthread_mutex_lock(
-					    &s_disp_ctl.mutex);
-
-					CMD_ID_SET(&s_disp_ctl.cmd, cmd_id);
-					dispthr_flagset_nolock(DISP_FLAG_CMD);
-
-					(void) pthread_mutex_unlock(
-					    &s_disp_ctl.mutex);
-				} else {
-					/*
-					 * Hit the keys 'UP'/'DOWN'/'ENTER'
-					 */
-					switch (ch) {
-					case 2:	/* KEY DOWN */
-						dispthr_flagset_lock(
-						    DISP_FLAG_SCROLLDOWN);
-						break;
-
-					case 3:	/* KEY UP */
-						dispthr_flagset_lock(
-						    DISP_FLAG_SCROLLUP);
-						break;
-
-					case 13:	/* enter. */
-						dispthr_flagset_lock(
-						    DISP_FLAG_SCROLLENTER);
-						break;
-
-					default:
-						break;
-					}
 				}
 			}
+			else {
+							/*
+							 * Character is from STDIN.
+							 */
+							if ((c = getch()) == ERR) {
+								/*
+								 * It's possile if the associated
+								 * terminal is lost.
+								 */
+								debug_print(NULL, 2, "cons: getch() failed. %c %d \n" ,ch, (int)ch);
+								break;
+							}
+
+							ch = tolower((unsigned char)c);
+							dump_write("\n<-- User hit the key '%c' (ascii = %d) -->\n", ch, (int)ch);
+
+							cmd_id = cmd_id_get(ch);
+							if (cmd_id != CMD_INVALID_ID) {
+								/*
+								 * The character is a command. Send
+								 * the command to 'disp thread'.
+								 */
+								(void) pthread_mutex_lock(&s_disp_ctl.mutex);
+
+								CMD_ID_SET(&s_disp_ctl.cmd, cmd_id);
+								dispthr_flagset_nolock(DISP_FLAG_CMD);
+
+								(void) pthread_mutex_unlock(&s_disp_ctl.mutex);
+								}
+							else {
+								/*
+								 * Hit the keys 'UP'/'DOWN'/'ENTER'
+								 */
+								switch (ch) {
+								case 2:	/* KEY DOWN */
+									dispthr_flagset_lock( DISP_FLAG_SCROLLDOWN);
+									break;
+
+								case 3:	/* KEY UP */
+									dispthr_flagset_lock(DISP_FLAG_SCROLLUP);
+									break;
+
+								case 13:	/* enter. */
+									dispthr_flagset_lock(DISP_FLAG_SCROLLENTER);
+									break;
+
+								default:
+									break;
+								}
+							}
+						}
 		}
 	}
 
@@ -748,11 +721,14 @@ L_EXIT:
 	debug_print(NULL, 2, "cons thread is exiting\n");
 	return (NULL);
 }
-
-void
-disp_dispthr_quit_wait(void)
+void disp_consthr_quit_wait(void)
 {
-	(void) pthread_join(s_disp_ctl.thr, NULL);
+	(void) pthread_join(s_cons_ctl.thr, NULL);
+	debug_print(NULL, 2, "cons thread exit yet\n");
+}
+void disp_dispthr_quit_wait(void)
+{
+	(void) pthread_join(s_cons_ctl.thr, NULL);
 	debug_print(NULL, 2, "disp thread exit yet\n");
 }
 

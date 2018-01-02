@@ -417,7 +417,7 @@ static int llrec_add(perf_llrecgrp_t *grp, pf_ll_rec_t *record) //here it goes .
 	llrec->addr = record->addr;
 	llrec->cpu = record->cpu;
 	llrec->latency = record->latency;
-	debug_print(NULL, 2, "LATENCY FROM LLREC_ADD %d \n",llrec->latency );
+	//debug_print(NULL, 2, "LATENCY FROM LLREC_ADD %d \n",llrec->latency );
 	llrec->callchain.ip_num = record->ip_num;
 	memcpy(llrec->callchain.ips, record->ips, IP_NUM * sizeof (uint64_t));
 	grp->nrec_cur++;
@@ -426,7 +426,7 @@ static int llrec_add(perf_llrecgrp_t *grp, pf_ll_rec_t *record) //here it goes .
 
 static int cpu_ll_smpl(perf_cpu_t *cpu, void *arg) //it goes from here : arg is task : which goes in :  This is done for each cpu
 {
-	task_ll_t *task = (task_ll_t *)arg;
+	//task_ll_t *task = (task_ll_t *)arg;
 
 	/*task_ll_t structure{
 	 * perf_taskid_t task_id;
@@ -447,8 +447,8 @@ static int cpu_ll_smpl(perf_cpu_t *cpu, void *arg) //it goes from here : arg is 
 	for (i = 0; i < record_num; i++) { //for each <address,cpu,latency,pid>
 		record = &s_ll_recbuf[i];
 
-		debug_print(NULL, 2, "Received task  PID %d TID:  %d CPU  %"PRIu64" cpu2 %d \n",record->pid,record->tid,record->cpu,cpu->cpuid);
-		if ((task->pid == record->pid))
+		//debug_print(NULL, 2, "Received task  PID %d TID:  %d CPU  %"PRIu64" cpu2 %d \n",record->pid,record->tid,record->cpu,cpu->cpuid);
+		/*if ((task->pid == record->pid))
 				{
 
 				}
@@ -459,7 +459,7 @@ static int cpu_ll_smpl(perf_cpu_t *cpu, void *arg) //it goes from here : arg is 
 		
 		if ((task->pid != 0) && (task->lwpid != 0) &&(task->lwpid != record->tid)) {
 			continue;
-		}
+		}*/
 
 		if ((proc = proc_find(record->pid)) == NULL) { //finds in the proc for each process and updates accordingly
 			return (0);
@@ -578,9 +578,20 @@ profiling_multi_restore(perf_ctl_t *ctl, task_multi_restore_t *task)
 	ctl->last_ms = current_ms(&g_tvbase);
 	return (0);	
 }
+static int ll_start1()
+{
+	debug_print(NULL,2,"lL START 1 REACHES \n");
+	/* Setup perf on each CPU. */
+	if (node_cpu_traverse(cpu_ll_setup, NULL, B_TRUE, NULL) != 0) {
+		return (-1);
+	}
+	debug_print(NULL,2,"lL START 1 REACHES \n");
+	/* Start to count on each CPU. */
+	node_cpu_traverse(cpu_ll_start, NULL, B_FALSE, NULL);
+	return (0);
+}
 
-static int
-ll_start(perf_ctl_t *ctl)
+static int ll_start(perf_ctl_t *ctl)
 {
 	/* Setup perf on each CPU. */
 	if (node_cpu_traverse(cpu_ll_setup, NULL, B_TRUE, NULL) != 0) {
@@ -594,18 +605,28 @@ ll_start(perf_ctl_t *ctl)
 	return (0);
 }
 
-static int
-ll_stop(void)
+static int ll_stop(void)
 {
 	node_cpu_traverse(cpu_ll_stop, NULL, B_FALSE, NULL);
 	node_cpu_traverse(cpu_resource_free, NULL, B_FALSE, NULL);
 	return (0);	
 }
 
+
+static int ll_smpl1()
+{
+
+	node_cpu_traverse(cpu_ll_smpl, NULL, B_FALSE, cpu_ll_setupstart); //cpu_ll_smpl takes 2 args (cpu_i,task)
+
+	return (0);
+}
+
 static int ll_smpl(perf_ctl_t *ctl, task_ll_t *task, int *intval_ms)
 {
+	debug_print(NULL, 2, "Insidell_smpl \n");
 	*intval_ms = current_ms(&g_tvbase) - ctl->last_ms;
 	proc_intval_update(*intval_ms);
+	debug_print(NULL, 2, "Inside ll_smpl :Interval %"PRIu64" \n",*intval_ms);
 	node_cpu_traverse(cpu_ll_smpl, (void *)task, B_FALSE, cpu_ll_setupstart); //cpu_ll_smpl takes 2 args (cpu_i,task)
 	ctl->last_ms = current_ms(&g_tvbase);
 	return (0);	
@@ -648,8 +669,7 @@ os_profiling_start(perf_ctl_t *ctl, perf_task_t *task)
 	return (0);
 }
 
-int
-os_profiling_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms)
+int os_profiling_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms)
 {
 	task_profiling_t *t = (task_profiling_t *)task;
 	int ret = -1;
@@ -735,13 +755,36 @@ os_callchain_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms)
 	/* Not supported in Linux. */
 	return (0);	
 }
+int os_ll_start1()
+{
+	os_allstop();
+		proc_ll_clear(NULL);
+		proc_callchain_clear();
+		proc_profiling_clear();
+		node_profiling_clear();
 
+
+		if (ll_start1() != 0) {
+			/*
+			 * It could be failed if the kernel doesn't support PEBS LL.
+			 */
+			debug_print(NULL, 2, "ll_start 1 is failed\n");
+			perf_status_set(PERF_STATUS_LL_FAILED);
+			return (-1);
+		}
+
+		debug_print(NULL, 2, "ll_start 1 success\n");
+		perf_status_set(PERF_STATUS_LL_STARTED);
+		return (0);
+}
 int os_ll_start(perf_ctl_t *ctl, perf_task_t *task)
 {
 	os_allstop();
+	proc_ll_clear(NULL);
 	proc_callchain_clear();
 	proc_profiling_clear();
 	node_profiling_clear();
+
 
 	if (ll_start(ctl) != 0) {
 		/*
@@ -756,23 +799,37 @@ int os_ll_start(perf_ctl_t *ctl, perf_task_t *task)
 	perf_status_set(PERF_STATUS_LL_STARTED);
 	return (0);
 }
-
-int os_ll_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms) //smaples the ll data
+int os_ll_smpl1() //samples the ll data
 {
+	debug_print(NULL, 2, "ll_smpl start\n");
 	if (!perf_ll_started()) {
+		printf("ll_smpl start error\n");
 		return (-1);
 	}
+	proc_enum_update(0);
+	proc_ll_clear(0);
+	node_cpu_traverse(cpu_ll_smpl, NULL, B_FALSE, cpu_ll_setupstart);
 
+	return (0);
+}
+int os_ll_smpl(perf_ctl_t *ctl, perf_task_t *task, int *intval_ms) //smaples the ll data
+{
+	debug_print(NULL, 2, "ll_smpl start\n");
+	if (!perf_ll_started()) {
+		printf("ll_smpl start error\n");
+		return (-1);
+	}
 	proc_enum_update(0);
 	proc_ll_clear(0);
 
 	if (ll_smpl(ctl, (task_ll_t *)(task), intval_ms) != 0) {
 		perf_status_set(PERF_STATUS_LL_FAILED);
-		disp_ll_data_fail();
+		//disp_ll_data_fail();
+		printf("ll_smpl start error\n");
 		return (-1);
 	}
 
-	disp_ll_data_ready(*intval_ms);
+	//disp_ll_data_ready(*intval_ms);
 	return (0);
 }
 
@@ -854,11 +911,12 @@ int os_perf_init(void)
 	return (0);	
 }
 
-void
-os_perf_fini(void)
+void os_perf_fini(void)
 {
+
 	if (s_profiling_recbuf != NULL) {
 		free(s_profiling_recbuf);
+		debug_print(NULL,2,"perf stopping.. \n");
 		s_profiling_recbuf = NULL;
 	}
 
@@ -944,13 +1002,11 @@ os_perf_callchain_smpl(void)
 	return (0);	
 }
 
-int
-os_perf_ll_smpl(perf_ctl_t *ctl, pid_t pid, int lwpid)
+int os_perf_ll_smpl(perf_ctl_t *ctl, pid_t pid, int lwpid)
 {
 	perf_task_t task;
 	task_ll_t *t;
-
-	perf_smpl_wait();
+	perf_smpl_wait(); //waiting for time interval
 	memset(&task, 0, sizeof (perf_task_t));
 	t = (task_ll_t *)&task;
 	t->task_id = PERF_LL_SMPL_ID;

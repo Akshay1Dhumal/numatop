@@ -1,0 +1,12 @@
+a=$(ps -e|grep facesim|awk '{print $1}')
+echo $a
+numbers=$(ps -T -p "$a")
+
+for (( i=0; i<${#numbers[@]}; i++ )); 
+do
+echo "number is " ${numbers[i]}
+ 
+done;
+
+
+

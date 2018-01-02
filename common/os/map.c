@@ -6,7 +6,7 @@
  *
  *   * Redistributions of source code must retain the above copyright notice,
  *     this list of conditions and the following disclaimer.
- *   * Redistributions in binary form must reproduce the above copyright
+ *   * Redistributions in binary form must reproduce the above copyrightfmap_addr2nodedst
  *     notice, this list of conditions and the following disclaimer in the
  *     documentation and/or other materials provided with the distribution.
  *   * Neither the name of Intel Corporation nor the names of its contributors
@@ -377,8 +377,7 @@ int map_map2numa(track_proc_t *proc, map_entry_t *map_entry)
 	return (0);
 }
 
-int map_addr2nodedst(pid_t pid, void **addr_arr, int *lat_arr, int addr_num,
-	map_nodedst_t *nodedst_arr, int nnodes, int *naccess_total)
+int map_addr2nodedst(pid_t pid, void **addr_arr, int *lat_arr, int addr_num,map_nodedst_t *nodedst_arr, int nnodes, int *naccess_total)
 {
 	int *status_arr, i, nid;
 	
@@ -400,10 +399,12 @@ int map_addr2nodedst(pid_t pid, void **addr_arr, int *lat_arr, int addr_num,
 	*naccess_total = 0;
 	for (i = 0; i < addr_num; i++) {
 		nid = status_arr[i];
-		debug_print(NULL, 2, "NID obtained is %d\n",nid);
+
 		if ((nid >= 0) && (nid < nnodes)) {
+
 			nodedst_arr[nid].naccess++;
 			nodedst_arr[nid].total_lat += lat_arr[i];
+			//debug_print(NULL, 2, "NID obtained is %d  %d latency %d\n",nid,nodedst_arr[nid].naccess,nodedst_arr[nid].total_lat);
 			*naccess_total += 1;
 		}
 	}

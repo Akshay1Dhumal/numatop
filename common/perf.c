@@ -135,8 +135,7 @@ perf_task_set(perf_task_t *task)
 	(void) pthread_mutex_unlock(&s_perf_ctl.mutex);
 }
 
-void
-perf_status_set(perf_status_t status)
+void perf_status_set(perf_status_t status)
 {
 	(void) pthread_mutex_lock(&s_perf_ctl.status_mutex);
 	s_perf_ctl.status = status;
@@ -170,8 +169,7 @@ status_failed(perf_status_t status)
 	return (B_FALSE);
 }
 
-int
-perf_status_wait(perf_status_t status)
+int perf_status_wait(perf_status_t status)
 {
 	struct timespec timeout;
 	struct timeval tv;
@@ -208,105 +206,31 @@ perf_status_wait(perf_status_t status)
  * The thread handler of 'perf thread'.
  */
 /* ARGSUSED */
-static void * perf_handler(void *arg)
+
+static void * perf_handler(void *arg) //fully changing this function
 {
 	perf_task_t task;
+	FILE *fp=NULL;
+	fp=fopen("heat.csv","w");
 	int intval_ms;
+	task_ll_t *t;
+	int seconds;
+	//waiting for time interval
+	memset(&task, 0, sizeof (perf_task_t));
+	t = (task_ll_t *)&task;
+	t->task_id = PERF_LL_SMPL_ID;
+	t->pid = 0;
+	t->lwpid = 0;
+	perf_task_set(&task);
 
-	for (;;) {
-		(void) pthread_mutex_lock(&s_perf_ctl.mutex);
-		task = s_perf_ctl.task;
-		while (!task_valid(&task)) {
-			(void) pthread_cond_wait(&s_perf_ctl.cond,
-			    &s_perf_ctl.mutex);
-			task = s_perf_ctl.task;
-		}
+	for (;;)
+	{
+		printf("perf thread is SAMPLING .\n");
+		os_ll_smpl1();
 
-		TASKID_SET(&s_perf_ctl.task, PERF_INVALID_ID);
-		(void) pthread_mutex_unlock(&s_perf_ctl.mutex);
+		usleep(1000000); //sleep for 1 sec
+		proc_traverse1(fp);
 
-		switch (TASKID(&task)) {
-		case PERF_QUIT_ID:
-			debug_print(NULL, 2, "perf_handler: received QUIT\n");
-			os_allstop();
-			goto L_EXIT;
-
-		case PERF_STOP_ID:
-			os_allstop();
-			perf_status_set(PERF_STATUS_IDLE);
-			break;
-
-		case PERF_PROFILING_START_ID:
-			if (os_profiling_start(&s_perf_ctl, &task) != 0) {
-				goto L_EXIT;
-			}
-			break;
-
-		case PERF_PROFILING_SMPL_ID:
-			(void) os_profiling_smpl(&s_perf_ctl, &task, &intval_ms);
-			break;
-
-		case PERF_PROFILING_PARTPAUSE_ID:
-			(void) os_profiling_partpause(&s_perf_ctl, &task);
-			break;
-
-		case PERF_PROFILING_MULTIPAUSE_ID:
-			(void) os_profiling_multipause(&s_perf_ctl, &task);
-			break;
-
-		case PERF_PROFILING_RESTORE_ID:
-			(void) os_profiling_restore(&s_perf_ctl, &task);
-			break;
-
-		case PERF_PROFILING_MULTI_RESTORE_ID:
-			(void) os_profiling_multi_restore(&s_perf_ctl, &task);
-			break;
-
-		case PERF_CALLCHAIN_START_ID:
-			(void) os_callchain_start(&s_perf_ctl, &task);
-			break;
-
-		case PERF_CALLCHAIN_SMPL_ID:
-			(void) os_callchain_smpl(&s_perf_ctl, &task, &intval_ms);
-			break;
-
-		case PERF_LL_START_ID:
-			os_ll_start(&s_perf_ctl, &task);
-			break;
-
-		case PERF_LL_SMPL_ID:
-			os_ll_smpl(&s_perf_ctl, &task, &intval_ms);
-			break;
-
-		case PERF_PQOS_CMT_START_ID:
-			os_pqos_cmt_start(&s_perf_ctl, &task);
-			break;
-
-		case PERF_PQOS_CMT_SMPL_ID:
-			os_pqos_cmt_smpl(&s_perf_ctl, &task, &intval_ms);
-			break;
-
-		case PERF_PQOS_CMT_STOP_ID:
-			os_pqos_proc_stop(&s_perf_ctl, &task);
-			perf_status_set(PERF_STATUS_PROFILING_STARTED);
-			break;
-
-		case PERF_UNCORE_STOP_ID:
-			os_uncore_stop(&s_perf_ctl, &task);
-			perf_status_set(PERF_STATUS_PROFILING_STARTED);
-			break;
-
-		case PERF_UNCORE_START_ID:
-			os_uncore_start(&s_perf_ctl, &task);
-			break;
-
-		case PERF_UNCORE_SMPL_ID:
-			os_uncore_smpl(&s_perf_ctl, &task, &intval_ms);
-			break;
-
-		default:
-			break;
-		}
 	}
 
 L_EXIT:
@@ -349,14 +273,8 @@ int perf_init(void)
 		goto L_EXIT;
 	}
 	status_cond_inited = B_TRUE;
-
+	perf_ll_start(0);
 	if (pthread_create(&s_perf_ctl.thr, NULL, perf_handler, NULL) != 0) {
-		goto L_EXIT;
-	}
-	s_perf_ctl.last_ms = current_ms(&g_tvbase);
-	if (perf_profiling_start() != 0) {
-		debug_print(NULL, 2, "perf_init: "
-		    "perf_profiling_start() failed\n");
 		goto L_EXIT;
 	}
 
@@ -387,8 +305,7 @@ L_EXIT:
 	return (0);
 }
 
-static void
-perfthr_quit_wait(void)
+static void perfthr_quit_wait(void)
 {
 	perf_task_t task;
 	task_quit_t *t;
@@ -407,8 +324,7 @@ perfthr_quit_wait(void)
 /*
  * Release the resources of perf control structure.
  */
-void
-perf_fini(void)
+void perf_fini(void)
 {
 	if (s_perf_ctl.inited) {
 		perfthr_quit_wait();
@@ -442,7 +358,7 @@ perf_profiling_start(void)
 
 	(void) memset(&task, 0, sizeof (perf_task_t));
 	t = (task_profiling_t *)&task;
-	t->task_id = PERF_PROFILING_START_ID;
+	t->task_id =  PERF_LL_START_ID;
 	perf_task_set(&task);
 	return (perf_status_wait(PERF_STATUS_PROFILING_STARTED));
 }
@@ -461,8 +377,7 @@ perf_profiling_start(void)
  * workload, it's overflowed in each 200ms. Then the user
  * can only see the RMA is 0 after he refreshes the window.
  */
-void
-perf_smpl_wait(void)
+void perf_smpl_wait(void)
 {
 	int intval_diff;
 
@@ -474,8 +389,7 @@ perf_smpl_wait(void)
 	}
 }
 
-int
-perf_profiling_smpl(boolean_t use_dispflag1)
+int perf_profiling_smpl(boolean_t use_dispflag1)
 {
 	perf_task_t task;
 	task_profiling_t *t;
@@ -549,22 +463,25 @@ perf_ll_started(void)
 	return (B_FALSE);
 }
 
-int perf_ll_start(pid_t pid)
+int perf_ll_start(pid_t pid) //to start the ll
 {
 	perf_task_t task;
 	task_ll_t *t;
-
+	debug_print(NULL, 2, "Pid received : %d \n", pid);
 	(void) memset(&task, 0, sizeof (perf_task_t));
 	t = (task_ll_t *)&task;
 	t->task_id = PERF_LL_START_ID;
 	t->pid = pid;
 	perf_task_set(&task);
-	return (perf_status_wait(PERF_STATUS_LL_STARTED));
+	os_ll_start1();
+	return 1;
+	//os_ll_start(&s_perf_ctl, &task);
+	//return (perf_status_wait(PERF_STATUS_LL_STARTED));
 }
 
-int
-perf_ll_smpl(pid_t pid, int lwpid)
+int perf_ll_smpl(pid_t pid, int lwpid) //for sampling ll
 {
+	debug_print(NULL, 2, "In sampling pid is: %d %d \n", pid,lwpid);
 	return (os_perf_ll_smpl(&s_perf_ctl, pid, lwpid));
 }
 

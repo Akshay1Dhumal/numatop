@@ -97,6 +97,7 @@ typedef struct _proc_group {
 } proc_group_t;
 
 extern int proc_group_init(void);
+extern void proc_traverse1(FILE *);
 extern void proc_group_fini(void);
 extern track_proc_t *proc_find(pid_t);
 extern track_lwp_t *proc_lwp_find(track_proc_t *, id_t);

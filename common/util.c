@@ -65,16 +65,18 @@ static unsigned int msdiff(struct timeval *, struct timeval *);
 /*
  * Allocate a buffer and reset it to zero.
  */
-void *
-zalloc(size_t n)
+void *zalloc(size_t n)
 {
+
 	void *p;
 
 	if (n == 0) {
+
 		return (NULL);
 	}
 
 	if ((p = malloc(n)) != NULL) {
+
 		(void) memset(p, 0, n);
 	}
 
@@ -117,8 +119,7 @@ debug_fini(void)
 /*
  * Write the message into log file according to different level.
  */
-void
-debug_print(FILE *out, int level, const char *fmt, ...)
+void debug_print(FILE *out, int level, const char *fmt, ...)
 {
 	va_list ap;
 
@@ -177,19 +178,21 @@ ratio(uint64_t value1, uint64_t value2)
 	return (r);
 }
 
-static int
-procfs_walk(char *path, int **id_arr, int *num)
+static int procfs_walk(char *path, int **id_arr, int *num)
 {
 	static DIR *dirp;
+
 	struct dirent *dentp;
 	int i = 0, size = *num, id;
 	int *arr1 = *id_arr, *arr2;
 
 	if ((dirp = opendir(path)) == NULL) {
+
 		return (-1);
 	}
 
 	while ((dentp = readdir(dirp)) != NULL) {
+
 		if (dentp->d_name[0] == '.') {
 			/* skip "." and ".." */
 			continue;
@@ -203,6 +206,7 @@ procfs_walk(char *path, int **id_arr, int *num)
 		if (i >= size) {
 			size = size << 1;
 			if ((arr2 = realloc(arr1, size * sizeof (int))) == NULL) {
+
 				free(arr1);
 				*id_arr = NULL;
 				*num = 0;
@@ -226,9 +230,11 @@ procfs_walk(char *path, int **id_arr, int *num)
 int
 procfs_enum_id(char *path, int **id_arr, int *nids)
 {
+
 	int *ids, num = PROCFS_ID_NUM;
 
 	if ((ids = zalloc(PROCFS_ID_NUM * sizeof (int))) == NULL) {
+
 		return (-1);
 	}
 
@@ -255,6 +261,7 @@ procfs_proc_enum(pid_t **pids, int *num)
 	 * It's possible that the id in return buffer is 0,
 	 * the caller needs to check again.
 	 */
+
 	return (procfs_enum_id("/proc", (int **)pids, num));
 }
 
